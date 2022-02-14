@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+* {
+    margin:0px;
+    padding: 0px;
+}
+
+
+header {
+    background-color: rgb(22, 89, 181);
+    height: 100px;  
+    padding-top: 40px;
+    padding-left: 160px;
+             
+}
+
+header h1 {
+
+    color:white;
+    margin-left: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 15px;
+    text-shadow:  1px 1px 0px rgba(0, 0, 0, 0.464)
+}
+
+header h2 {
+
+    color: whitesmoke;
+    margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 1em;
+    text-shadow:  1px 1px 0px rgba(0, 0, 0, 0.464)
+}
+
+nav {
+    background-color: rgb(15, 64, 152);
+    text-align: right;
+    
+    }
+
+nav ol li {
+
+    list-style-type: none;
+    display: inline;
+    margin-right: 5px;
+    color: white;
+    font-size: 8px;
+    text-shadow:  1px 1px 0px rgba(0, 0, 0, 0.464);
+    }
+
+nav strong {
+
+    color:rgb(15, 64, 152);
+    text-decoration: none;
+    text-shadow: none;
+    font-weight: lighter;
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+}
+
+main {
+    background-color: white;
+    max-width: 600px;
+    padding: 20px;
+}
+
+main p {
+    
+    max-width: 600px;
+    
+}
+
+aside {
+    width: 135px;
+    padding-left: 140px;
+}
+
+aside ol {
+    list-style-type: none;
+    color: rgb(22, 89, 181);
+    font-size: 0.8em;
+    padding: 5px;
+    text-shadow:  0.1px 0.1px 0px rgba(0, 0, 0, 0.464)
+    
+}
+
+aside li {
+    color: rgb(87, 87, 87);
+    border-bottom: 1px solid lightgray;
+    margin-right: 30px;
+    font-size: 1em;
+    padding: 5px;
+}
+
+
+aside div {
+
+    margin-left: 10px;
+    width: 95px;
+    height: 34px;
+    border-top: 4px solid rgb(22, 89, 181);
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(197, 197, 197);
+    color: rgb(22, 89, 181);
+    font-weight: bold;
+    padding-top: 6px
+
+}
+
+section {
+    position: absolute;
+    top: 200px;
+    margin-left: 280px;
+}
+
+#botao {
+    width: 100px;
+}
+
+#fotoprincipal {
+    width: 550px;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Formulários</title>
+
+<style>
+
+    body>form>div {
+        width: 100%;
+        height: 100px;
+        border: 3px solid black;
+        border-radius: 25px;
+        background-color: rgba(0, 0, 255, 0.282);
+        margin-bottom: 10px;
+    }
+
+    fieldset {
+        width: 85%;
+        height: 10vh;
+        background-color: rgba(222, 184, 135, 0.104);
+        border-radius: 30px;
+        margin-bottom: 10px;
+    }
+
+    input {
+        display: block;
+        padding: 10px;
+        margin-bottom: 10px;
+        
+    }
+
+    input {
+
+        background-color: rgb(218, 195, 166);
+        border-radius: 25px;
+        color: rgb(11, 55, 56);
+    }
+
+    input:hover {
+        color: yellow;
+    }
+
+    h2 {
+
+        text-align: center;
+
+    }
+
+    h3 {
+        text-align: center;
+        color: gray;
+        
+    }
+
+    label {
+
+        text-align: center;
+    }
+
+</style>
+
+
+</head>
+<body>
+    
+<h1 style="text-align: justify;">a tag action foi deixada vazia, porque será visto no javascript.</h1>
+    
+
+<h2>Faça um formulário com nome, cidade idade e cor</h1>
+
+<h3>Formulário</h1>
+
+<DIV>
+<form action="">
+    
+<label for="inome"> Nome:
+    
+    <input type="text" name="Nome" value="coloque seu nome" id="inome">
+    
+    </label>
+
+<label for="icidade"> Cidade:
+        <input type="text" name="Nome" value="coloque seu nome" id="icidade">
+</label>
+
+<label for="inumber"> Idade:
+    <input type="number" id="inumber">
+</label>
+
+<label for="icolor"> Cor:
+    <input type="color" id="icolor">
+</label>
+
+<label for="isubmit"> Enviar
+
+<input type="submit" id="isubmit">
+
+</label>
+
+</DIV>
+
+
+<div> 
+
+    <h3>Usando Radio e Checkbox</h3>
+
+<form action=""> Qual suas cores preferidas?
+
+<input type="checkbox" name="cor" id="icores">
+<label for="icores">Azul</label>
+<input type="checkbox" name="cor" id="icores">
+<label for="icores">Verde</label>
+<input type="checkbox" name="cor" id="icores">
+<label for="icores">Amarelo</label>
+
+
+
+</form>
+
+<form action=""> Qual seu sexo?
+
+    <input type="radio" name="isexo" id="imasculino">
+    <label for="imasculino">Masculino</label>
+    <input type="radio" name="isexo" id="ifeminino">
+    <label for="ifeminino">Feminino</label>
+
+    
+    </form>
+    
+
+
+</div>
+
+
+
+</form>
+
+
+
+
+
+</form>
+
+
+</body>
+</html>
