@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever - Entrega em 16/02</title>
+</head>
+<body>
+<!--
+1.	Crie um script, declara 4 variáveis e armazene cada informação no console.log().
+2.	Crie um script para ler 2 variáveis, concatene as informações e exiba na tela como alert().
+3.	Crie um script para calcular a área de um retângulo. O usuário deverá digitar o valor da base e altura. Exiba o valor da área no corpo da página.
+4.	Faça um Script para exibir seu nome, nome do seu pai, nome da sua mãe e sua idade. Armazene cada informação em uma variável e exiba no console do navegador.
+5.	Faça um Script para armazenar 2 números inteiros. Exiba o resultado da subtração, multiplicação, divisão, módulo e exponenciação do primeiro valor em relação ao segundo valor. Exiba cada resultado com o comando alert().
+6.	 Faça um script para armazenar 5 números. Exiba o valor de cada número, identificando-os ( ex: 1ª valor é xxx). 
+Exiba também o resultado da subtração e multiplicação dos 5 números. Exiba cada resultado no console.
+7.	Faça um Script para calcular a área de um triangulo. Solicite os valores ao usuário e exiba o resultado no console.
+-->
+<script>
+
+var pri,sec,ter,qua, qui, sex, nome, soma, sub, mult, div, rest, exp, b, h, area;
+//5.	Faça um Script para armazenar 2 números inteiros. Exiba o resultado da subtração, multiplicação, divisão, módulo e exponenciação do primeiro valor em relação ao segundo valor. Exiba cada resultado com o comando alert().
+
+pri = 1;
+sec = 2;
+ter = 3;
+qua = 4;
+qui = "CE";
+sex = "LO";
+
+soma = pri + sec;
+sub = pri - sec;
+mult = pri * sec;
+div = pri / sec; 
+rest = pri % sec;
+exp = pri ** sec; 
+
+window.alert("O resultado da soma, subtração, multiplicação, divisão, módulo e exponenciação, respetivamente é: " + soma + " , " + sub + " , " + mult + " , " + div + " , " + rest + " , " + exp + " . ");
+
+console.log(soma)
+
+// 6.	 Faça um script para armazenar 5 números. Exiba o valor de cada número, identificando-os ( ex: 1ª valor é xxx). Exiba também o resultado da subtração e multiplicação dos 5 números. Exiba cada resultado no console.
+
+window.alert("O valor de cada número, na sequencia é: " + pri + " , " + sec + " , " + ter + " , " + qua + " , " + soma + " . " + "A soma de todos eles é: " + (pri+sec+ter+qua+soma) + " e a multiplicação é: " + (pri*sec*ter*qua*soma) + ".");
+
+// 7.	Faça um Script para calcular a área de um triangulo. Solicite os valores ao usuário e exiba o resultado no console.
+
+window.alert("A area de um triangulo é definida pela (bxh)/2");
+
+b = prompt("Coloque a base do triângulo: ");
+h = prompt("Coloque a altura do triângulo: ")
+area = b*h
+
+console.log(area)
+
+window.alert("Logo sendo base = " + b + "," + " Altura = " + h + " , o valor da área será ((bxh)/2): " + area + ".");
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever - Entrega em 16/02</title>
+</head>
+<body>
+<!--
+1.	Crie um script, declara 4 variáveis e armazene cada informação no console.log().
+2.	Crie um script para ler 2 variáveis, concatene as informações e exiba na tela como alert().
+3.	Crie um script para calcular a área de um retângulo. O usuário deverá digitar o valor da base e altura. Exiba o valor da área no corpo da página.
+4.	Faça um Script para exibir seu nome, nome do seu pai, nome da sua mãe e sua idade. Armazene cada informação em uma variável e exiba no console do navegador.
+5.	Faça um Script para armazenar 2 números inteiros. Exiba o resultado da subtração, multiplicação, divisão, módulo e exponenciação do primeiro valor em relação ao segundo valor. Exiba cada resultado com o comando alert().
+6.	 Faça um script para armazenar 5 números. Exiba o valor de cada número, identificando-os 
+( ex: 1ª valor é xxx). 
+Exiba também o resultado da subtração e multiplicação dos 5 números. Exiba cada resultado no console.
+7.	Faça um Script para calcular a área de um triangulo. Solicite os valores ao usuário e exiba o resultado no console.
+-->
+<script>
+
+var pri,sec,ter,qua, qui, sex, nome;
+//1.	Crie um script, declara 4 variáveis e armazene cada informação no console.log().
+pri = 1;
+sex = 2;
+ter = 3;
+qua = 4;
+qui = "CE";
+sex = "LO";
+
+console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+
+//2.	Crie um script para ler 2 variáveis, concatene as informações e exiba na tela como alert().
+
+nome = qui + sex;
+console.log(nome)
+window.alert(nome)
+
+//3.	Crie um script para calcular a área de um retângulo. O usuário deverá digitar o valor da base e altura. Exiba o valor da área no corpo da página.
+var area,a,b;
+var a = prompt("Coloque a altura: ");
+var b = prompt("Coloque a largura: ");
+area = a * b
+document.write("A autora é " + a + "e a largura é " + b + " e sua área é "+ area);
+
+//4.	Faça um Script para exibir seu nome, nome do seu pai, nome da sua mãe e sua idade. Armazene cada informação em uma variável e exiba no console do navegador.
+
+var eu,mae,pai,idade;
+var eu = prompt("Qual o seu nome? ");
+var mae = prompt("Qual o nome da sua mãe? ");
+var pai = prompt("Qual o nome da seu pai? ");
+var idade = Number(prompt("Qual a sua idade? "));
+
+console.log(eu)
+console.log(mae)
+console.log(pai)
+console.log(idade)
+
+//5.	Faça um Script para armazenar 2 números inteiros. Exiba o resultado da subtração, multiplicação, divisão, módulo e exponenciação do primeiro valor em relação ao segundo valor. Exiba cada resultado com o comando alert().
+
+var soma, sub, mult, div, rest, exp;
+
+soma = pri + sex;
+sub = pri - sex;
+mult = pri * sex;
+div = pri / sex; 
+rest = pri % sex;
+exp = pri ** sex; 
+
+window.alert("O resultado da soma, subtração, multiplicação, divisão, módulo e exponenciação, respetivamente é: " + soma + " , " + sub + " , " + mult + " , " + div + " , " + rest + " , " + exp + " . ");
+
+console.log(soma)
+
+
+
+</script>
+
+</body>
+</html>
