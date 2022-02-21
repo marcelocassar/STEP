@@ -15,16 +15,24 @@
     
 <script>
 
-    var nome, idade, cid, nasc, uf;
+    var nome, idade, cid, nasc, uf, demaior;
 
     nome = prompt("Coloque seu nome");
     idade = prompt("Coloque sua idade");
     cid = prompt("Coloque sua Cidade");
     nasc = prompt("Coloque sua data de nascimento");
     uf = prompt("Qual o seu Estado?");
+    
+    if (idade>=18) {
 
-    document.write("<p>Seu nome, idade, Cidade, data de nascimento e UF são, respectivamente: " + nome + " , " + idade + " , " + cid + " , " + nasc + " , " + uf + " .</p>")
+        demaior="maior de idade"
+    }
+    else {
 
+        demaior="menor de idade"
+        }
+
+    document.write("<p>Seu nome, idade, Cidade, data de nascimento e UF são, respectivamente: " + nome + " , " + idade + " , " + cid + " , " + nasc + " , " + uf + " .</p> <p> Sou " + demaior + ".</p>");
 
 </script>
 </body>
