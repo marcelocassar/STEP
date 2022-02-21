@@ -8,18 +8,24 @@
 </head>
 <body>
     
-    1.	Faça um Script para ler 2 números digitados pelo usuário. Exiba na página o menor número digitado.
-    2.	Faça um Script para ler 2 números digitados pelo usuário. Exiba na página o maior número digitado.
-    3.	Faça um Script para ler 3 números, verifique qual é o maior valor.
-    4.	Faça um script para ler 4 números, verifique qual é o menor valor.
-    5.	Faça um Script para que o usuário digite 2 nomes. Analise se os nomes digitados são iguais ou diferentes.
-    6.	Faça um Script para ler 1 números digitados pelo usuário. Verifique se o número é ímpar.
-    7.	Faça um Script para ler 1 números digitados pelo usuário. Verifique se o número é múltiplo de 7.
-    8.	Faça um Script para pedir o usuário o seu nome, idade, cidade de nascimento e UF. Escreva na página a seguinte frase: 
-    Eu [nome da pessoa], tenho x anos de idade, sou [maior ou menor de idade] e nasci na cidade de [nome da cidade] – [uf].
+    <p>
+        8.	Faça um Script para pedir o usuário o seu nome, idade, cidade de nascimento e UF. Escreva na página a seguinte frase:
+        Eu [nome da pessoa], tenho x anos de idade, sou [maior ou menor de idade] e nasci na cidade de [nome da cidade] – [uf].
+    </p>
     
+<script>
+
+    var nome, idade, cid, nasc, uf;
+
+    nome = prompt("Coloque seu nome");
+    idade = prompt("Coloque sua idade");
+    cid = prompt("Coloque sua Cidade");
+    nasc = prompt("Coloque sua data de nascimento");
+    uf = prompt("Qual o seu Estado?");
+
+    document.write("<p>Seu nome, idade, Cidade, data de nascimento e UF são, respectivamente: " + nome + " , " + idade + " , " + cid + " , " + nasc + " , " + uf + " .</p>")
 
 
-
+</script>
 </body>
 </html>

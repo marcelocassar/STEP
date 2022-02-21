@@ -8,18 +8,34 @@
 </head>
 <body>
     
-    1.	Faça um Script para ler 2 números digitados pelo usuário. Exiba na página o menor número digitado.
-    2.	Faça um Script para ler 2 números digitados pelo usuário. Exiba na página o maior número digitado.
-    3.	Faça um Script para ler 3 números, verifique qual é o maior valor.
     4.	Faça um script para ler 4 números, verifique qual é o menor valor.
-    5.	Faça um Script para que o usuário digite 2 nomes. Analise se os nomes digitados são iguais ou diferentes.
-    6.	Faça um Script para ler 1 números digitados pelo usuário. Verifique se o número é ímpar.
-    7.	Faça um Script para ler 1 números digitados pelo usuário. Verifique se o número é múltiplo de 7.
-    8.	Faça um Script para pedir o usuário o seu nome, idade, cidade de nascimento e UF. Escreva na página a seguinte frase: 
-    Eu [nome da pessoa], tenho x anos de idade, sou [maior ou menor de idade] e nasci na cidade de [nome da cidade] – [uf].
     
+    <script>
 
+        var n1,n2,n3,n4;
+        var n1 = prompt("Digite o número 1: ");
+        var n2 = prompt("Digite o número 2: ");
+        var n3 = prompt("Digite o número 3: ");
+        var n4 = prompt("Digite o número 4: ");
+        var menor = n1
+        
+        console.log(n1 + " " + n2 + " " + n3 + " " + n4)
 
+        if(n2<menor){
+            menor = n2
+        } 
+        
+        if (n3<menor){
+            menor = n3
+        } 
+        
+        if (n4<menor){
+            menor = n4
+        
+        } 
 
+        document.write("O menor número é " = menor)
+
+    </script>
 </body>
 </html>
