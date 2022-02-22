@@ -17,15 +17,38 @@
     
 <script>
 
-var n1, idade,nasc,res,mes, ano, dia;
+var n1, idade,nasc,res,mes, ano, dia, idadetotal;
 
-n1 = prompt("Em que ano você nasceu? ");
-n2 = prompt("Em que mês você nasceu? ");
-n3 = prompt("Em que dia você nasceu? ");
+n1 = Number(prompt("Em que ano você nasceu? "));
+n2 = Number(prompt("Em que mês você nasceu? "));
+n3 = Number(prompt("Em que dia você nasceu? "));
+
+meshoje = 02
+anohoje = 2022
+diahoje = 21
 
 idade = 2022 - n1
 
-document.write("Você tem " + idade + " anos." + "Nasceu em :" + n3 + "/" + n2 + "/" + n1);
+if (meshoje < n2) {
+
+    idadetotal = idade - 1
+
+} else if (meshoje == n2) {
+
+    if (diahoje > n3) {
+        idadetotal= idade - 1
+    }
+} else {
+
+idadetotal = idade
+}
+
+document.write("<p>Sua idade é " + idadetotal + "</p>")
+
+document.write("Você tem " + idadetotal + " anos." + "Nasceu em :" + n3 + "/" + n2 + "/" + n1);
+
+
+
 
 </script>
 </body>
