@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever aula 13</title>
+</head>
+<body>
+    
+    <p>8.	Faça um script para ler 6 números, verifique qual é o menor valor.</p>
+
+    <script>
+
+      var n1, n2, n3, n4, n5, n6, res
+
+      n1 = prompt("Digite 1 número: ");
+      n2 = prompt("Digite o 2º número: ");
+      n3 = prompt("Digite o 3º número: ");
+      n4 = prompt("Digite o 4º número: ");
+      n5 = prompt("Digite o 5º número: ");
+      n6 = prompt("Digite o 6º número: ");
+
+      document.write("Os valores digitados foram: " + n1 + " ," + n2 + " , " + n3 + " , " + n4 + " , " + n5 + " e " + n6 + " . ")
+
+      res = n1;
+     
+      if (res > n2) {
+          res = n2
+      }
+
+      if (res > n3) {
+          res = n3
+      }
+
+      if (res > n4) {
+          res = n4
+      }
+
+      if (res > n5) {
+          res = n5
+      }
+
+      if (res > n6) {
+          res = n6
+      }
+
+
+      document.write("<p>O menor número é " + res + ".</p>");
+
+  </script>
+
+
+</body>
+</html>

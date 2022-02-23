@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever aula 13</title>
+</head>
+<body>
+    
+    <p>1.	Faça um script para ler a média (de 0 a 100). Diga se o aluno está aprovado, reprovado e em recuperação. ( Aprovado média de 70 a 100; em recuperação de 40 a 70 e reprovado de 0 a 40).</p>
+
+    <script>
+
+        var nota1, nota2, media, aprov, repr, rec
+  
+        nota1 = Number(prompt("Digite a nota1: "))
+        nota2 = Number(prompt("Digite a nota 2: "))
+        media = (nota1 + nota2) / 2
+  
+        if (media >= 70 && media <= 100) {
+           document.write("Aluno <strong>APROVADO</strong>")
+        }
+  
+        if (media < 40) {
+           document.write("Aluno <strong>REPROVADO</strong>")
+        }
+  
+        if (media >= 40 && media < 70) {
+           document.write("Aluno em <strong>RECUPERAÇÃO</strong>")
+        }
+  
+        if (media < 0 || media > 100){
+           document.write("<strong>Nota Inválida</strong>")
+        }
+
+</body>
+</html>

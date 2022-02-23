@@ -17,10 +17,46 @@
     
 <script>
 
+var anohoje,diahoje,meshoje,ano,dia,mes,idade1,idadetotal
+
+ano = Number(prompt("Digite o seu ANO de nascimento: "));
+mês = Number(prompt("Digite o seu MÊS de nescimento (1 a 12)"))
+dia = Number(prompt("Digite o seu DIA do seu nascimento :"));
+
+anohoje = 2022
+meshoje = 02
+diahoje = 22
+
+idade1 = anohoje - ano;
+
+if (mes < meshoje){
+
+    document.write(idadetotal = idade1 - 1)
+}else{
+    
+    document.write(idadetotal=idade1)
+
+}
+/*
+if (mes = meshoje){
+
+    if (dia < diahoje) {
+        document.write(idadetotal = idade1 - 1)
+    }
+}else{
+    document.write(idadetotal=idade1)
+} 
+
+*/
+
+
+
+
+/*
 var n1, idade,nasc,res,mes, ano, dia, idadetotal;
 
 n1 = Number(prompt("Em que ano você nasceu? "));
-n2 = Number(prompt("Em que mês você nasceu? "));
+n2 = Number(prompt("Em que mês você nasceu, de 01 a 12? "));
 n3 = Number(prompt("Em que dia você nasceu? "));
 
 meshoje = 02
@@ -29,26 +65,40 @@ diahoje = 21
 
 idade = 2022 - n1
 
-if (meshoje < n2) {
+if (n2 > meshoje) {
 
     idadetotal = idade - 1
 
-} else if (meshoje == n2) {
+} else {
 
-    if (diahoje > n3) {
+idadetotal = idade
+
+}
+
+if (meshoje == n2) {
+
+    if (diahoje < n3) {
         idadetotal= idade - 1
     }
 } else {
 
 idadetotal = idade
+
 }
 
 document.write("<p>Sua idade é " + idadetotal + "</p>")
 
 document.write("Você tem " + idadetotal + " anos." + "Nasceu em :" + n3 + "/" + n2 + "/" + n1);
 
+if (dsads){
+    
+}
 
+if (dadsa){
 
+} else {}
+
+*/
 
 </script>
 </body>

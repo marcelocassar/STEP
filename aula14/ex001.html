@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+
+
+   <script>
+
+      var nota1, nota2, media, aprov, repr, rec
+
+      nota1 = Number(prompt("Digite a nota1: "))
+      nota2 = Number(prompt("Digite a nota 2: "))
+      media = (nota1 + nota2) / 2
+
+      if (media >= 70 && media <= 100) {
+         document.write("Aluno <strong>APROVADO</strong>")
+      }
+
+      if (media < 40) {
+         document.write("Aluno <strong>REPROVADO</strong>")
+      }
+
+      if (media >= 40 && media < 70) {
+         document.write("Aluno em <strong>RECUPERAÇÃO</strong>")
+      }
+
+      if (media < 0 || media > 100){
+         document.write("<strong>Nota Inválida</strong>")
+      }
+
+
+   </script>
+
+</body>
+
+</html>

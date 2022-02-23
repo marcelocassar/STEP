@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever aula 13</title>
+</head>
+<body>
+    
+
+    7.	Faça um Script para ler 5 números, verifique qual é o maior valor.
+
+    <script>
+
+        var n1, n2, n3, n4, n5, res
+
+        n1 = prompt("Digite 1 número: ");
+        n2 = prompt("Digite o 2º número: ");
+        n3 = prompt("Digite o 3º número: ");
+        n4 = prompt("Digite o 4º número: ");
+        n5 = prompt("Digite o 5º número: ");
+
+        document.write("Os valores digitados foram: " + n1 + " ," + n2 + " , " + n3 + " , " + n4 + " e " + n5 + " . ")
+
+        res = n1;
+       
+        if (n2 > res) {
+            res = n2
+        }
+
+        if (n3 > res) {
+            res = n3
+        }
+
+        if (n3 > res) {
+            res = n4
+        }
+
+        if (n5 > res) {
+            res = n5
+        }
+
+        document.write("<p>O maior número é " + res + ".</p>");
+
+    </script>
+
+
+    
+
+
+</body>
+</html>
