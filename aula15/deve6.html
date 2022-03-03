@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever aula 15 - 1</title>
+</head>
+<body>
+
+<p>6.	Faça um script para ler 6 números, verifique qual é o menor valor. (if encadeado)</p>
+
+<script>
+
+var a,b,c,d,e,f, maior
+
+a = prompt("Digite o 1º número: ");
+b = prompt("Digite o 2º número: ");
+c = prompt("Digite o 3º número: ");
+d = prompt("Digite o 4º número: ");
+e = prompt("Digite o 5º número: "); 
+f = prompt("Digite o 6º número: "); 
+maior = a
+
+if (b >= maior) {
+    maior = b
+}
+if (c >= maior) {
+    maior = c
+} 
+    
+if (d >= maior) {
+    maior = d
+} 
+
+if (e >= maior) {
+    maior = e
+}
+if (f >= maior) {
+    maior = f
+} 
+
+document.write("<p>O Maior número digitado foi :" + maior + ".</p>")
+document.write("Os números digitados foram : " + a + ", " + b + ", " + c + ", " + d + ", " + e + ", " + f + ". " )
+
+</script>
+
+
+</body>
+</html>
+
+
+

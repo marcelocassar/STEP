@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever aula 15 - 1</title>
+</head>
+<body>
+
+<p>
+    9.	Faça um script para ler o dia, o mês e o ano de seu nascimento. Depois leia o dia, o mês e o ano atual.
+    Calcule a idade da pessoa. Use comandos if , if/else ou if/else encadeado.
+</p>
+
+<script>
+
+var diahoje, meshoje, anohoje, dia, mes, ano, idade
+
+diahoje = 02
+meshoje = 03
+anohoje = 2022
+
+dia = prompt("Qual o dia do seu nascimento? - formato - 01, 02 , 03 ...");
+mes = prompt("Qual o mês do seu nascimento? - formato - 01 , 02 , 03...");
+ano = prompt("Qual o ano do seu nascimento? - formato - 1984 , 2000 , 2001 ...");
+
+// mes 03 
+// ano 2022
+// dia 14
+
+if (ano > anohoje) {
+
+    document.write("Você digitou errado")
+}
+
+if (anohoje > ano) {
+
+            if (meshoje>mes){
+            
+            idade = anohoje - ano}          
+            
+            } else if (anohoje == ano) {
+
+                    if (meshoje > mes) {
+
+                        idade = anohoje - ano
+
+                        }} else if (meshoje == mes){
+                            
+                            if (diahoje > dia) {
+
+                                idade = "Voce tem" + diahoje - dia + "dias"
+
+                                    } else if (meshoje<mes){
+
+                                        idade = anohoje - ano -1
+                                
+                            }
+
+
+                        }
+
+document.write("<p> Você tem " + idade )
+
+
+</script>
+
+</body>
+</html>
