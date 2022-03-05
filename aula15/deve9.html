@@ -32,13 +32,28 @@ ano = prompt("Qual o ano do seu nascimento? - formato - 1984 , 2000 , 2001 ...")
 if (ano > anohoje) {
 
     document.write("Você digitou errado")
-}
 
-if (anohoje > ano) {
+            } else if (anohoje > ano) {
 
-            if (meshoje>mes){
+                if meshoje > mes {
+
+                    idade = anohoje - ano
+
+                } else {
+
+
+                }
+
+
+     /*
+
+
+        } else if (anohoje > ano) {
+                      
+         
             
-            idade = anohoje - ano}          
+       
+            idade = anohoje - ano
             
             } else if (anohoje == ano) {
 
@@ -46,21 +61,19 @@ if (anohoje > ano) {
 
                         idade = anohoje - ano
 
-                        }} else if (meshoje == mes){
+                        }} else if (meshoje < mes){
                             
-                            if (diahoje > dia) {
+                            idade = anohoje - ano - 1
 
-                                idade = "Voce tem" + diahoje - dia + "dias"
+                            } else if (meshoje == mes) {
 
-                                    } else if (meshoje<mes){
+                                if (diahoje>=dia) {
+                                    idade = anohoje - ano
+                                }} else (diahoje<dia); {
 
-                                        idade = anohoje - ano -1
-                                
-                            }
-
-
-                        }
-
+                                    idade = anohoje - ano -  1
+                                }
+                                                                
 document.write("<p> Você tem " + idade )
 
 
