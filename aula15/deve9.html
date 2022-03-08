@@ -23,7 +23,7 @@
         meshoje = 03
         anohoje = 2022
 
-        dia = prompt("Qual o dia do seu nascimento? - formato - 01, 02 , 03 ...");
+        dia = Number(prompt("Qual o dia do seu nascimento? - formato - 01, 02 , 03 ..."));
         mes = prompt("Qual o mês do seu nascimento? - formato - 01 , 02 , 03...");
         ano = prompt("Qual o ano do seu nascimento? - formato - 1984 , 2000 , 2001 ...");
         // para exemplo: 
@@ -38,6 +38,10 @@
             idade = "Você digitou errado."
             
         }
+
+        // ano      - 2021
+        // anohoje  - 2022
+        
 
         else if (anohoje < ano || anohoje > ano) {
             // vou para o primeiro if, para se 2022 for menor que o ano de nascimento, tá errado;
