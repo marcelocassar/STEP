@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <p>
+        <p>
+            1.	Faça um script para imprimir um menu.
+            O usuário deverá digitar uma das opções abaixo. Realize a interação com o usuário e as operações conforme o item escolhido. (Usar comando switch para fazer o menu).
+            Menu:
+        </p>
+        <pre>
+            Digite uma das opções abaixo:
+            1-  Somar
+            2 - Subtrair
+            3 - Multiplicar
+            4 - Dividir
+            5 – Sair
+        </pre>
+    </p>
+    
+    <script>
+
+        var num1 = Number(prompt("Escolha um número"));
+        var num2 = Number(prompt("Escolha um número"));
+        var menu = prompt("Digite uma das opções abaixo: 1-  Somar 2 - Subtrair 3 - Multiplicar 4 - Dividir   5 – Sair");
+
+        switch (menu) {
+
+        case "1": 
+     
+        document.write(`Somar - A soma entre ${num1} e ${num2} é ${(num1 + num2)}`);
+
+        break ;
+                
+        case "2": 
+
+        document.write(`Subtrair - A subtração entre ${num1} e ${num2} é ${(num1 - num2)}`);
+
+        break;
+                
+        case "3":
+
+        document.write(`Multiplicação - A multiplicação entre ${num1} e ${num2} é ${(num1 * num2)}`);
+
+        break;
+
+        case "4":
+
+        document.write(`Dividir - A divisão entre ${num1} e ${num2} é ${(num1 / num2)}`);
+
+        break;
+
+        case "5":
+
+        document.write("Sair");
+
+        break;
+    }
+    </script>
+
+
+
+</body>
+</html>
