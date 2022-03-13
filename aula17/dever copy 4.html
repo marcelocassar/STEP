@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever Aula 17</title>
+</head>
+<body>
+    
+    <pre>
+        Nome do Aluno:	MARCELO RICHTER CASSAR
+        4.	Faça um Script para verificar se um caracter digitado é um número ou pontuação.
+    </pre>
+
+    <script>
+
+        var res = prompt('Digite algo');
+        
+        switch (res) {
+
+            case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9': case '0':
+            document.write("<p style='font-size: 20px; font-weight: bolder; text-align: center; margin: auto;'>O valor digitado é um número.</p>")
+            break
+
+            case '.': case ',': case ';': case ':': case '?': case '~': case '^': case '`': case '/': case '!':
+            document.write("<p style='font-size: 20px; font-weight: bolder; text-align: center; margin: auto;'>O valor digitado é uma pontuação.</p>")
+            break
+
+            default:
+            document.write("<p style='font-size: 20px; font-weight: bolder; text-align: center; margin: auto;'>O valor digitado não é uma pontuação ou número.</p>")
+            break
+
+        }
+
+    </script>
+    
+
+     
+    
+
+
+
+</body>
+</html>

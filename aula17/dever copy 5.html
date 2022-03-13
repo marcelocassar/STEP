@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever Aula 17</title>
+</head>
+<body>
+    
+    <pre>
+        Nome do Aluno:	MARCELO RICHTER CASSAR
+        5.	Faça um script para verificar se um caracter digitado é uma vogal, consoante, número ou pontuação.
+        (Usar comando switch)
+    </pre>
+       
+    
+            <script>
+
+                var res = prompt('Digite algo');
+                
+                switch (res) {
+        
+                    case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9': case '0':
+                    document.write("<p style='font-size: 20px; font-weight: bolder; text-align: center; margin: auto;'>O valor digitado é um número.</p>")
+                    break
+        
+                    case '.': case ',': case ';': case ':': case '?': case '~': case '^': case '`': case '/': case '!':
+                    document.write("<p style='font-size: 20px; font-weight: bolder; text-align: center; margin: auto;'>O valor digitado é uma pontuação.</p>")
+                    break
+        
+                    case "a": case "e": case "i": case "o": case "u": case "A": case "E": case "I": case "O": case "U":
+                    document.write("Você digitou uma vogal.") 
+                    break
+            
+                    case "b": case "c": case "d": case "f": case "g": case "h": case "j": case "k": case "l": case "m": case "n": case "o":
+                    case "p": case "q": case "r": case "s": case "t": case "u": case "v": case "x": case "y": case "w": case "z": 
+                    case "B": case "C": case "D": case "F": case "G": case "H": case "J": case "K": case "L": case "M": case "N": case "O":
+                    case "P": case "Q": case "R": case "S": case "T": case "U": case "V": case "X": case "Y": case "W": case "Z": 
+                    document.write('<p style="font-size: 33px; font-weight: bolder; text-decoration: double;"> Voce Digitou uma Consoante.</p>')
+                    break
+
+                    default:
+                        document.write("Algo errado não está nada certo!")
+                    break
+                    
+
+                }
+        
+            </script>
+
+
+</body>
+</html>
