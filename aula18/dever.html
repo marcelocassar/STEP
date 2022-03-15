@@ -7,36 +7,75 @@
     <title>Dever aula 18</title>
 </head>
 <body>
-1.	Faça um script onde o usuário digite o dia, mês e ano de nascimento e o dia, mês e ano. Calcule a quantidade de dias de dia desta pessoa.
-2.	Desconsidere os anos bissextos. Um ano tem 365 dias.
-3.	Este desafio pode ser feito usando o comando if simples, if/else, if/else aninhado e ou switch.
-4.	Exiba a quantidade de dias de nascimento.
-5.	Copie e cole o script do HTML
-
-Teste as datas:
-
-Data Nascimento	data Atual
-
-1JAN2000		31DEZ2006
-10JAN2001		10JAN2008
-15OUT2000		25MAR2016
-30DEZ2005		12FEV2011
+<pre>
+    1.	Faça um script onde o usuário digite o dia, mês e ano de nascimento e o dia, mês e ano. Calcule a quantidade de dias de dia desta pessoa.
+    2.	Desconsidere os anos bissextos. Um ano tem 365 dias.
+    3.	Este desafio pode ser feito usando o comando if simples, if/else, if/else aninhado e ou switch.
+    4.	Exiba a quantidade de dias de nascimento.
+    5.	Copie e cole o script do HTML
+    
+    Teste as datas:
+    
+    Data Nascimento	data Atual
+    
+    1JAN2000		31DEZ2006
+    10JAN2001		10JAN2008
+    15OUT2000		25MAR2016
+    30DEZ2005		12FEV2011
+</pre>
 
 
 <script>
-    let dianasc = prompt("Que DIA você nasceu? - FORMATO - 01 , 12, 31")
-    let mesnasc = prompt("Que MÊS você nasceu? - FORMATO - 01 , 07, 12")
-    let anonasc = prompt("Que dia você nasceu? - FORMATO - 2022, 1984")
-    let diahj = prompt("Que DIA é HOJE? - FORMATO 01,12,31")
-    let meshj = prompt("Que MÊS É o atual? - FORMATO - 01,02,12")
-    let anohj = prompt("Qual o ano atual?")
+    let dianasc = Number(prompt("Que DIA você nasceu? - FORMATO - 01 , 12, 31"))
+    let mesnasc = Number(prompt("Que MÊS você nasceu? - FORMATO - 01 , 07, 12"))
+    let anonasc = Number(prompt("Que dia você nasceu? - FORMATO - 2022, 1984"))
+    let diahj = Number(prompt("Que DIA é HOJE? - FORMATO 01,12,31"))
+    let meshj = Number(prompt("Que MÊS É o atual? - FORMATO - 01,02,12"))
+    let anohj = Number(prompt("Qual o ano atual?"))
+  
+    document.write(`<p>Você digitou que nasceu em: ${dianasc} / ${mesnasc} / ${anonasc}</p>`)
+    document.write(`<p>Você digitou que hoje é dia: ${diahj} / ${meshj} / ${anohj}</p>`)
 
-    // EXEMPLO 14/03/1984 - 14/03/2022
+    if (mesnasc==1){mesnasc =0}
+    if (mesnasc==2){mesnasc =31}
+    if (mesnasc==3){mesnasc =31 + 28}
+    if (mesnasc==4){mesnasc =30 + 31 + 28}
+    if (mesnasc==5){mesnasc =31 + 30 + 31 + 28}
+    if (mesnasc==6){mesnasc =30 + 31 + 30 + 31 + 28}
+    if (mesnasc==7){mesnasc =31 + 30 + 31 + 30 + 31 + 28}
+    if (mesnasc==8){mesnasc =31 + 31 + 30 + 31 + 30 + 31 + 28}
+    if (mesnasc==9){mesnasc =30 + 31 + 31 + 30 + 31 + 30 + 31 + 28}
+    if (mesnasc==10){mesnasc=31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 28}
+    if (mesnasc==11){mesnasc=30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 28}
+    if (mesnasc==12){mesnasc=31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 28}
 
-    // 1JAN2000		31DEZ2006
+    anonasc = anonasc * 365
+    datanasc = anonasc + dianasc + mesnasc
 
-    
+    if (meshj==1){meshj =0}
+    if (meshj==2){meshj =31}
+    if (meshj==3){meshj =31 + 28}
+    if (meshj==4){meshj =30 + 31 + 28}
+    if (meshj==5){meshj =31 + 30 + 31 + 28}
+    if (meshj==6){meshj =30 + 31 + 30 + 31 + 28}
+    if (meshj==7){meshj =31 + 30 + 31 + 30 + 31 + 28}
+    if (meshj==8){meshj =31 + 31 + 30 + 31 + 30 + 31 + 28}
+    if (meshj==9){meshj =30 + 31 + 31 + 30 + 31 + 30 + 31 + 28}
+    if (meshj==10){meshj=31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 28}
+    if (meshj==11){meshj=30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 28}
+    if (meshj==12){meshj=31 + 30 + 31 + 30 + 31 + 31 + 30 + 31 + 30 + 31 + 28}
 
+    anohj = anohj * 365
+    datahj = anohj + diahj + meshj
+    dif = datahj - datanasc
+
+    if (datahj<datanasc){
+
+        document.write(`<p>Você digitou errado.</p>`)    
+
+    } else {
+    document.write(`<p>Você tem ${dif} dias de vida!</p>`)
+}
 </script>
 
 
