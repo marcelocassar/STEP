@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever aula 18</title>
+</head>
+<body>
+<pre>
+    1.	Faça um script onde o usuário digite o dia, mês e ano de nascimento e o dia, mês e ano. Calcule a quantidade de dias de dia desta pessoa.
+    2.	Desconsidere os anos bissextos. Um ano tem 365 dias.
+    3.	Este desafio pode ser feito usando o comando if simples, if/else, if/else aninhado e ou switch.
+    4.	Exiba a quantidade de dias de nascimento.
+    5.	Copie e cole o script do HTML
+    
+    Teste as datas:
+    
+    Data Nascimento	data Atual
+    
+    1JAN2000		31DEZ2006
+    10JAN2001		10JAN2008
+    15OUT2000		25MAR2016
+    30DEZ2005		12FEV2011
+</pre>
+
+
+<script>
+
+    let datanasc, datahj, dif 
+
+    let dianasc = Number(prompt("Que DIA você nasceu? - FORMATO - 01 , 12, 31"))
+    let mesnasc = prompt("Que MÊS você nasceu? - FORMATO - 01 , 07, 12")
+    let anonasc = Number(prompt("Que dia você nasceu? - FORMATO - 2022, 1984"))
+    let diahj = Number(prompt("Que DIA é HOJE? - FORMATO 01,12,31"))
+    let meshj = Number(prompt("Que MÊS É o atual? - FORMATO - 01,02,12"))
+    let anohj = Number(prompt("Qual o ano atual?"))
+  
+    document.write(`<p>Você digitou que nasceu em: ${dianasc} / ${mesnasc} / ${anonasc}</p>`)
+    document.write(`<p>Você digitou que hoje é dia: ${diahj} / ${meshj} / ${anohj}</p>`)
+
+    switch (mesnasc) {
+
+        case "1": case "01": mesnasc = 0 
+        break
+        case "2": case "02": mesnasc = 31 
+        break
+        case "3": case "03": mesnasc = 59 
+        break
+        case "4": case "04": mesnasc = 90 
+        break
+        case "5": case "05": mesnasc = 120 
+        break
+        case "6": case "06": mesnasc = 151 
+        break
+        case "7": case "07": mesnasc = 181 
+        break
+        case "8": case "08": mesnasc = 212 
+        break
+        case "9": case "09": mesnasc = 243 
+        break
+        case "10": mesnasc = 273 
+        break
+        case "11": mesnasc = 304 
+        break
+        case "12": mesnasc = 334 
+        break
+        default: mesnasc = "Erro"
+            document.write("Você digitou Errado")
+        // A FORMULA ABAIXO É PARA CONVERTER OS NÚMEROS EM DIAS. ENTÃO EU PEGO O MES E USO O SWITH, AI PEGO OS DIAS TOTAIS DAQUELE MES, SOMO OS DIAS CORRENTES DO MES E POR FIM PEGO O ANO E MULTIPLICO POR 365, OU SEJA, DATANASC (EM DIAS) = ANONASC + DIANASC + MESNASC (TODOS ESSES JÁ CONVERTIDOS EM DIAS)
+    anonasc = anonasc * 365
+    datanasc = anonasc + dianasc + mesnasc
+
+    switch (meshj) {
+
+case "1": case "01": mesnasc = 0 
+break
+case "2": case "02": mesnasc = 31 
+break
+case "3": case "03": mesnasc = 59 
+break
+case "4": case "04": mesnasc = 90 
+break
+case "5": case "05": mesnasc = 120 
+break
+case "6": case "06": mesnasc = 151 
+break
+case "7": case "07": mesnasc = 181 
+break
+case "8": case "08": mesnasc = 212 
+break
+case "9": case "09": mesnasc = 243 
+break
+case "10": mesnasc = 273 
+break
+case "11": mesnasc = 304 
+break
+case "12": mesnasc = 334 
+break
+default: mesnasc = "Erro"
+    document.write("Você digitou Errado")
+
+
+
+    anohj = anohj * 365
+    datahj = anohj + diahj + meshj
+    dif = datahj - datanasc
+
+    document.write(`${diahj} . ${meshj} . ${dianasc} . ${mesnasc} . `)    
+
+
+    if (datahj<datanasc){
+
+        document.write(`<p>Você digitou errado.</p>`)    
+
+    } else {
+    document.write(`<p>Você tem ${dif} dias de vida!</p>`)
+}
+</script>
+
+
+
+</body>
+</html>
