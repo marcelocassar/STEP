@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Exercício de Array</title>
+</head>
+<body>
+
+    <style>
+
+        li {
+            list-style-type: none;
+        }
+
+    </style>
+    
+        <p>Exercícios</p>
+        
+        <p>2.	Faça um script para armazenar 5 nomes e uma array e faça as seguintes tarefas:</p>
+
+        <ol>
+            <li>a.	Exiba o tamanho do vetor;
+            <li>b.	Exiba todos os elementos do vetor;
+            <li>c.	Remova o ultimo nome do vetor;
+            <li>d.	Remova o primeiro elemento do vetor
+            <li>e.	Exiba todos os elementos do vetor;
+            <li>f.	Adicione o nome “ana maria” no primeiro elemento do vetor
+            <li>g.	Exiba o tamanho do vetor;
+            <li>h.	Exiba todos os elementos do vetor separados pelo caracter “#”
+            
+             <p>Use as funções deArray.</p>
+        </ol>
+
+<script>
+
+    var nomes = []
+    var entrada1 = prompt("Digite um nome: ") 
+    nomes.push(entrada1)
+    var entrada2 = prompt("Digite um nome: ")
+    nomes.push(entrada2)
+    var entrada3 = prompt("Digite um nome: ")
+    nomes.push(entrada3)
+    var entrada4 = prompt("Digite um nome: ")
+    nomes.push(entrada4)
+    var entrada5 = prompt("Digite um nome: ")
+    nomes.push(entrada5)
+     
+  
+    document.write("a - O vetor tem :" + nomes.length + " de tamanho.<br>");
+    document.write("b - Todos os elementos dos vetores são, até essa cadeia de comando: " + nomes + " .<br>");
+    nomes.pop();
+    document.write("c - Agora o vetor tem :" + nomes.length + " de tamanho.<br>");
+    nomes.shift();
+    document.write("d- Agora o vetor tem :" + nomes.length + " de tamanho.<br>");
+    document.write("e - Todos os elementos dos vetores são, até essa cadeia de comando: " + nomes + " .<br>");
+    document.write("f - Ana Maria será colocado na primeira posição (zero)<br>")
+    nomes.unshift("Ana Maria");
+    document.write("g- Agora o vetor tem :" + nomes.length + " de tamanho.<br>");
+    document.write("h- Todos os elementos dos vetores são, até essa cadeia de comando: <br>" + nomes.join("#") + "<br>");
+
+//length retorna o tamanho do vetor
+//push() adiciona um valor no ultimo indice do vetor
+//pop(), remove o ultimo elemento do vetor
+//shift() remove o primeiro elemento da array
+//unshift(), adiciona um elemente na primeira posição da array
+//toString(), converte um valor de array ou a array em String
+//o comando join(), junta os elementos da array, separando por algum caracter específico.
+
+
+</script>
+
+
+
+    
+
+
+
+</body>
+</html>
