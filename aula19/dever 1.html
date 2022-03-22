@@ -38,11 +38,13 @@
 <div>
 <script>
 
-    var meses = [0,'jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez']
+    var meses = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez']
 
     pergunta =  parseInt(prompt("Digite seu mês de nascimento em meses", "Ex.: 01,02 e 03"))
 
-    document.write("<p>Você nasceu no mês de " + meses[pergunta] + ".</p>")
+    document.write("<p>Você nasceu no mês de " + meses[pergunta - 1] + ".</p>")
+
+
 
 </script>
 </div>
