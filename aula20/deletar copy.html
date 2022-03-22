@@ -9,18 +9,22 @@
 <body>
     
 
+
 <script>
 
-    var numero = 1;
-    while (numero<=40) {
-        if (numero%2==1){
-        document.write("<br> " + numero);
-        // se eu colocasse ++numero ele ia somar antes de imprimir. Como eu coloquei numero++ ele imprime e depois soma.
-        }
-        numero++
-   }
+//contar multiplos de 7 entre 0 e 1000
 
+    var numero = 0;
+    var contagem = 0;
+    while (numero<=1000) {
+        if (numero%7==0 && numero%17==0){
+        contagem++
+       }
+        numero++
+        }
+    document.write("<br> Total de Números: " + contagem);
     document.write("<br> Fim do Programa");
+
 
 </script>
 </body>
