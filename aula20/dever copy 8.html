@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Obs: Os números deverão ser impressos um em cada linha no corpo do HTML.
+    Fazer usando o comando WHILE
+   
+    8.	Faça um Script em javascript para verificar se um número digitado pelo usuário é um número primo.
+    
+        <script>
+
+        var n = parseInt(prompt("Digite um número", ""));
+        var cont = 0;
+        var i = 0;
+        while (i <= n) {
+        if (n % i == 0) {
+        cont++;
+        }
+        i++;
+        }
+        if (cont == 2) {
+        document.write("O número " + n + " é primo.");
+        } else {
+        document.write("O número " + n + " não é primo.");
+        }
+                       
+        </script>
+    
+
+
+</body>
+</html>
