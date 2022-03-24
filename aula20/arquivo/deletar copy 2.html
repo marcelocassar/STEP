@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício While</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var numero = parseInt(prompt("Digite um Número"));
+        var resultado = 0
+        var divisor = 1
+        var contagem = 0
+
+        while (numero >= divisor) {
+
+            resultado = numero % divisor
+            if (resultado == 0) { 
+                contagem++ 
+            }
+            divisor++
+        }
+
+        if (contagem > 2) {
+            document.write("O número não é primo")
+        } else {
+            document.write("O número é primo")
+        }
+    </script>
+
+</body>
+
+</html>
