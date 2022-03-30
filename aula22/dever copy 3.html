@@ -1,37 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dever aulas 7 e 8 JS</title>
 </head>
+
 <body>
-    
-    Dever de casa:
 
-1 – Faça um script para criar um vetor de X elementos:
-•	Armazene valores no vetor (com interação com usuário)
-•	Exiba todos os valores armazenado
-•	Exiba o maior valor digitado
-•	Exiba o menor valor digitado
-•	Exiba a soma de todos os elementos do vetor
-•	Faça o script usando o comando FOR()
+    <pre>
+        Dever de casa:
+        
+        3 – Faça um programa para exibir um menu:
+        
+         Menu
+        Digite 1 para calcular a média de 3 notas:
+        Digite 2 para calcular a área de um retângulo:
+        Digite S para sair
+        
+        O script deverá se repetir até o usuário digitar “s” ou “S” para sair.
+        Use o comando do-while()
+        Copie e cole o script neste dever de casa.
+    </pre>
 
-2 - Faça o mesmo código usando o comando while().
+    <script>
+
+     
+        while (escolha != "S") {
+
+            var escolha = prompt("Digite 1 para média, 2 para área retangulo ou S para sair.");
+
+            switch (escolha) {
+
+                case "1":
+                    var nota1 = parseInt(prompt("Digite a nota 1: "));
+                    var nota2 = parseInt(prompt("Digite a nota 2: "));
+                    var nota3 = parseInt(prompt("Digite a nota 3: "));
+
+                    res = (nota1 + nota2 + nota3) / 3;
+                    document.write(res + "<br>.");
+
+                    break;
+
+                case "2":
+
+                    
+                    var base = parseInt(prompt("Digite a base do retângulo "));
+                    var altura = parseInt(prompt("Digite a altura do retângulo "));
+                    res = (base * altura);
+                    document.write(res+ "<br>.");
+                    
+
+                    break;
+
+                case "S": case "s":
+
+                    document.write("Fim Do Programa <br>.")
+
+                    break;
+            }
+
+        }
 
 
-3 – Faça um programa para exibir um menu:
 
- Menu
-Digite 1 para calcular a média de 3 notas:
-Digite 2 para calcular a área de um retângulo:
-Digite S para sair
+    </script>
 
-O script deverá se repetir até o usuário digitar “s” ou “S” para sair.
-Use o comando do-while()
-Copie e cole o script neste dever de casa.
 
 
 </body>
+
 </html>

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dever aulas 7 e 8 JS</title>
 </head>
+
 <body>
-    
+
     <pre>
         Dever de casa:
         
@@ -21,23 +23,41 @@
     </pre>
 
     <script>
-    var v1 = [];
-    var i = 1;
-    
-    for (num = 0; num != null; ++i) {
+        var v1 = [];
+        var i = 1;
+        var num1 = prompt("Digite um número :" + i + " º.");
+        v1.push(num1);
+        maior = parseInt(num1);
+        menor = parseInt(num1);
+        total = parseInt(num1);
 
-        var num = prompt("Digite um número :" + i + " º.");
-        
-        if (num != null){
-            v1.push(num);
-        } 
-    }
+        for (num = 0; num != null; ++i) {
 
-        console.log(v1);
-        document.write(v1);
-     
+            var num = prompt("Digite um número :" + (i+1) + " º.");
+            
+            if (num != null) {
+                v1.push(num);
+                total = (parseInt(total) + parseInt(num));
+            }
 
-</script>
+            if (parseInt(num) >= maior) {
+
+                maior = num;
+            }
+
+            if (parseInt(num) < menor) {
+                menor = parseInt(num);
+            }
+            
+        }
+            console.log(v1);
+            document.write(v1 + "-vetores- <br>");
+            document.write(maior + " maior <br>");
+            document.write(menor + "  menor <br>");
+            document.write(total + " A soma de todos os vetores. <br>")
+
+    </script>
 
 </body>
+
 </html>

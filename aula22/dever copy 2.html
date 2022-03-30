@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dever aulas 7 e 8 JS</title>
 </head>
+
 <body>
-    
+
     Dever de casa:
 
-1 – Faça um script para criar um vetor de X elementos:
-•	Armazene valores no vetor (com interação com usuário)
-•	Exiba todos os valores armazenado
-•	Exiba o maior valor digitado
-•	Exiba o menor valor digitado
-•	Exiba a soma de todos os elementos do vetor
-•	Faça o script usando o comando FOR()
+    <pre>
+    1 – Faça um script para criar um vetor de X elementos:
+    •	Armazene valores no vetor (com interação com usuário)
+    •	Exiba todos os valores armazenado
+    •	Exiba o maior valor digitado
+    •	Exiba o menor valor digitado
+    •	Exiba a soma de todos os elementos do vetor
+    •	Faça o script usando o comando FOR()
+    
+    2 - Faça o mesmo código usando o comando while().
+</pre>
 
-2 - Faça o mesmo código usando o comando while().
+    <script>
 
+        var v1 = [];
+        var i = 1;
+        var num1 = prompt("Digite um número :" + i + " º.");
+        v1.push(num1);
+        maior = parseInt(num1);
+        menor = parseInt(num1);
+        total = parseInt(num1);
+        num = 0
 
-3 – Faça um programa para exibir um menu:
+        while(num != null) {
 
- Menu
-Digite 1 para calcular a média de 3 notas:
-Digite 2 para calcular a área de um retângulo:
-Digite S para sair
+            var num = prompt("Digite um número :" + (i + 1) + " º.");
 
-O script deverá se repetir até o usuário digitar “s” ou “S” para sair.
-Use o comando do-while()
-Copie e cole o script neste dever de casa.
+            if (num != null) {
+                v1.push(num);
+                total = (parseInt(total) + parseInt(num));
+            }
+
+            if (parseInt(num) >= maior) {
+
+                maior = num;
+            }
+
+            if (parseInt(num) < menor) {
+                menor = parseInt(num);
+            }
+
+            ++i
+        }
+        console.log(v1);
+        document.write(v1 + "-vetores- <br>");
+        document.write(maior + " maior <br>");
+        document.write(menor + "  menor <br>");
+        document.write(total + " A soma de todos os vetores. <br>")
+
+    </script>
 
 
 </body>
+
 </html>

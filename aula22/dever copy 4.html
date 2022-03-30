@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dever aulas 7 e 8 JS</title>
 </head>
+
 <body>
-    
+
     <script>
-        var v1 = [];
-        
-        for (num = 0; num != null; ) {
-            var num = prompt("Digite um número :");
-            v1.push(num);
-            console.log(v1);
-            document.write(v1);
-        
-        }
-        console.log(v1);
-        document.write(v1);
+        var op; // declaração de variável
+        do {
+            document.write("<br><br>Menu");
+            document.write("<br>Digite uma opção abaixo:")
+            document.write("<br>1 - Para Somar");
+            document.write("<br>2 - Para Subtrair");
+            document.write("<br>3 - Para Multiplicar");
+            document.write("<br>4 - Para Dividir");
+            document.write("<br>s - Para Sair");
+            op = prompt("Digite a opção desejada", "");
+            document.write("<br>Você escolheu a opção " + op);
+            if (op == "1") {
+                // faz a interação para a soma
+                document.write("<br> Somar...");
+            } else {
+                if (op == "2") {
+                    // faz a interação para a subtração
+                    document.write("<br> Subtrair...");
+                } else {
+                    if (op == "3") {
+                        // faz a interação para a multiplicação
+                        document.write("<br> Multiplicar...");
+                    } else {
+                        if (op == "4") {
+                            // faz a interação para divisao
+                            document.write("<br> dividir ...");
+                        } else {
+                            if (op == "s") {
+                                // vc escolheu sair
+                                document.write("<br> sair ...");
+                            } else {
+                                // mensagem de opção inválida
+                                document.write("<br> opção inválida ...");
+                            }
+                        }
+                    }
+                }
+            }
+        } while (op != "s");
+        document.write("<br>Fim do programa.");
     </script>
 
 
 </body>
+
 </html>
