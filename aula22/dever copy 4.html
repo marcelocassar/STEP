@@ -12,14 +12,11 @@
 
     <script>
         var op; // declaração de variável
+
+        document.write("<br><br>Menu<br>Digite uma opção abaixo:<br>1 - Para Somar<br>2 - Para Subtrair<br>3 - Para Multiplicar<br>4 - Para Dividir<br>s - Para Sair");
+
         do {
-            document.write("<br><br>Menu");
-            document.write("<br>Digite uma opção abaixo:")
-            document.write("<br>1 - Para Somar");
-            document.write("<br>2 - Para Subtrair");
-            document.write("<br>3 - Para Multiplicar");
-            document.write("<br>4 - Para Dividir");
-            document.write("<br>s - Para Sair");
+
             op = prompt("Digite a opção desejada", "");
             document.write("<br>Você escolheu a opção " + op);
             if (op == "1") {
@@ -38,18 +35,14 @@
                             // faz a interação para divisao
                             document.write("<br> dividir ...");
                         } else {
-                            if (op == "s") {
-                                // vc escolheu sair
-                                document.write("<br> sair ...");
-                            } else {
-                                // mensagem de opção inválida
-                                document.write("<br> opção inválida ...");
-                            }
+                            // mensagem de opção inválida
+                            document.write("<br> opção inválida ...");
                         }
                     }
                 }
             }
-        } while (op != "s");
+        }
+        while (op != "s");
         document.write("<br>Fim do programa.");
     </script>
 
