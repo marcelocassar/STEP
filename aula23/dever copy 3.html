@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <pre>
+
+    3.	Faça uma função em JavaScript para ler um caracter (um único caracter como String). O programa deverá verificar se o caracter digitado é um número. (Usar comando switch).
+    Obs: Refaça os exercícios, usando funções.
+        
+</pre>
+
+    <script>
+
+        function lerNumero(n) {
+
+            switch (n) {
+
+                case "1": 
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                case "0":
+                    document.write("Você digitou um número")
+                    break;
+                default:
+                    document.write("Você não digitou um número.")
+            }
+
+        }
+
+        var numero = prompt("Digite algo.")
+
+        lerNumero(numero)
+
+    </script>
+
+
+</body>
+
+</html>

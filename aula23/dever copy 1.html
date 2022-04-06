@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <pre>
+    1.	Faça uma função em JavaScript onde o usuário digite um número inteiro positivo. Imprima todos os números positivos divisíveis por 3 até o número digitado pelo usuário.
+    Obs: Refaça os exercícios, usando funções.
+    </pre>
+
+    <script>
+        /* anotações importantes:
+            PRIMEIRO - declara a função, repare que se enfiar ponto e virgula errado, a função não funciona.
+
+            SEGUNDO - no corpo da função coloca a declaração de variáveis;
+
+            TERCEIRO - por ultimo voce manda o promt. O promt, vai ser uma variável, que vai entrar na função, no caso o valor vai entrar no n. 
+
+        */
+
+        function imprimirParesPositivos(n) {
+            var i = 1;
+            var cont = 0;
+            while (i <= n) {
+
+                if (i % 3 == 0) {
+                    cont++
+                }
+                i++
+            }
+
+            document.write("O total de números divisíveis, menores ou iguais a "+ valor + " é " + cont + ".<br>");
+        }
+        var valor = parseInt(prompt("Digite um Número Inteiro e Positivo"));
+
+        imprimirParesPositivos(valor);
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <pre>
+
+    4.	Faça uma função em JavaScript, para o usuário digitar um número inteiro de 1 a 7. Os números correspondem ao dia da semana. Exemplo 1- domingo, 2 – segunda e assim por diante. (Usar comando switch).
+    Desafio (opcional)
+    Obs: Refaça os exercícios, usando funções.
+    
+</pre>
+
+    <script>
+
+        function lerNumero(n) {
+
+            switch (n) {
+
+                case "1":
+                    document.write("Você digitou 1, e o primeiro dia da semana é Domingo!")
+
+                    break;
+                case "2":
+                    document.write("Você digitou 2, e o segundo dia da semana é Segunda-Feira!")
+                    break;
+                case "3":
+                    document.write("Você digitou 3, e o segundo dia da semana é Terça-Feira!")
+                    break;
+                case "4":
+                    document.write("Você digitou 4, e o segundo dia da semana é Quarta-Feira!")
+                    break;
+                case "5":
+                    document.write("Você digitou 5, e o segundo dia da semana é Quinta-Feira!")
+                    break;
+                case "6":
+                    document.write("Você digitou 6, e o segundo dia da semana é Sexta-Feira!")
+                    break;
+                case "7":
+                    document.write("Você digitou 7, e o segundo dia da semana é Sábado!")
+                    break;
+
+                default:
+                    document.write("Você não digitou corretamente.")
+            }
+
+        }
+
+        var semana = prompt("Digite algo.")
+
+        lerNumero(semana)
+
+
+    </script>
+
+
+</body>
+
+</html>

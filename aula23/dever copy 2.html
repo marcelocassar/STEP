@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<pre>
+   
+    2.	Faça uma função em JavaScript para ler um caracter. O programa deverá verificar se o caracter digitado é vogal. (Usar comando switch).
+    Obs: Refaça os exercícios, usando funções.
+       
+</pre>
+
+<script>
+
+    function descobrirVogal(n) {
+
+        switch (n) {
+
+            case "a":
+            case "e":
+            case "i":
+            case "o":
+            case "u":
+                document.write("Você digitou uma vogal")
+            break;
+            default:
+                document.write("Desculpe, o valor digitado não é uma vogal.")
+        }
+    }
+
+    var letra = prompt("Digite um caractere.")
+
+    descobrirVogal(letra)
+
+</script>
+</body>
+</html>
+
