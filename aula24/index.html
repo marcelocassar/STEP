@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <pre>
+        Faça uma pasta para somar 2 números
+        crie um botar para somar
+        e imprima o resultado em outra input ou parágrafo
+    </pre>
+    <label for="">Número 1</label>
+    <input type="text" name="" id="num1"><br><br>
+    <label for="">Número 2</label>
+    <input type="text" id="num2"><br><br>
+    <input type="button" value="Somar" onclick="somar()"><br><br>
+    <input type="button" value="Subtrair" onclick="subtrair()"><br><br>
+    <input type="button" value="Dividir" onclick="divisao()"><br><br>
+    <label for="">Resultado</label>
+    <input type="text" name="" id="res"><br><br>
+
+    <script>
+
+            
+        function somar() {
+            
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var resSoma = parseInt(num1) + parseInt(num2);
+            document.getElementById("res").value = "A soma é: " + resSoma + ".";
+        }
+
+        function subtrair() {
+
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var resSub = parseInt(num1) - parseInt(num2);
+            document.getElementById("res").value = "A subtração é: " + resSub + ".";
+        }
+
+        function divisao() {
+
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var resDiv = parseInt(num1) / parseInt(num2);
+            document.getElementById("res").value = "A subtração é: " + resDiv + ".";
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
