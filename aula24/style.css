@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.calculadora{
+
+    height: 520px;
+    width: 440px;
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+.calculadora div{
+    border: 1px solid black;
+}
+
+.calculadora input{
+    height: 65px;
+    width: 105px;
+}
+
+.visor{
+    height: 130px;
+    width: 438px;
+    margin-bottom: 3px;    
+}
+
+.quadrado{
+    height: 65px;
+    width: 105px;
+    display: inline-block;
+    margin-bottom: 2px;
+
+}
