@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 20px;
+}
+
+header h1{
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.285);
+    font-size: 22px;
+    padding: 10px;
+
+}
+
+.formulario{
+
+    width: 600px;
+    height: 530px;
+    background-color: rgb(132, 171, 171);
+    text-align: center;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px black;
+    margin: auto;
+    
+}
+
+.dados div{
+    display: inline-block;
+}
+
+.dados label, .assunto label{
+    width: 55px;
+    display: inline-block;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.285);
+
+}
+
+.dados input{
+    width: 400px;
+    margin: 10px;
+    font-size: 35px;
+}
+
+footer p{
+    text-align: center;
+}
+

@@ -8,62 +8,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <pre>
-        Dever de casa:
-        1.	 Faça uma calculadora simples em HTML e use CSS externo. (somente o desenho)
-        Use como modelo a imagem abaixo.
-        
-         
-        Para Visor coloque uma input do tipo texto.
-        Os números e operadores, são botões.
-        
-        DESAFIO:
-        
-        Fala uma lista com todos os requisitos para o funcionamento de uma calculadora.
-        
-        Faça as funções básicas:  +, -, *,  / e =
-        
-        Dicas:
-        Pense em realizar o cálculo básico
-        Valor1 operador  valor2  sinal de igual   resultado.
-         n1 + n2 = resultado.
-        
-        Depois verifique as outras possibilidades de cálculos:
-        10 + = ?
-        11 + 5 +6 =?
-        4 + 5 * 8 =?
-        -10 + 8 =?
-        4 + * 2 =?
-        5=?
-    </pre>
-
+   
 <div class="calculadora">
-
-<div class="visor">VISOR</div>
-<div class="quadrado"><input type="button" value="%" onclick="porcentagem()"></input></div>
-<div class="quadrado"><input type="button" value="CE" onclick="zerar1()"></input></div>
-<div class="quadrado"><input type="button" value="C" onclick="zerar2()"></input></div>
-<div class="quadrado"><input type="button" value="DEL" onclick="back()"></input></div>
-<div class="quadrado"><input type="button" value=" "></input></div>
-<div class="quadrado"><input type="button" value="x²" onclick="potencia()"></input></div>
-<div class="quadrado"><input type="button" value="Raiz²" onclick="raiz()"></input></div>
-<div class="quadrado"><input type="button" value="/" onclick="divisao()"></div>
-<div class="quadrado"><input type="button" value="7" onclick="num7()"></div>
-<div class="quadrado"><input type="button" value="8" onclick="num8()"></div>
-<div class="quadrado"><input type="button" value="9" onclick="num9()"></div>
-<div class="quadrado"><input type="button" value="x" onclick="mult()"></div>
-<div class="quadrado"><input type="button" value="4" onclick="num4()"></div>
-<div class="quadrado"><input type="button" value="5" onclick="num5()"></div>
-<div class="quadrado"><input type="button" value="6" onclick="num6()"></div>
-<div class="quadrado"><input type="button" value="-" onclick="sub()"></div>
-<div class="quadrado"><input type="button" value="1" onclick="num1()"></div>
-<div class="quadrado"><input type="button" value="2" onclick="num2()"></div>
-<div class="quadrado"><input type="button" value="3" onclick="num3()"></div>
-<div class="quadrado"><input type="button" value="+" onclick="soma()"></div>
-<div class="quadrado"><input type="button" value=" " onclick=""></div>
-<div class="quadrado"><input type="button" value="0" onclick="num0()"></div>
-<div class="quadrado"><input type="button" value="," onclick="virgula()"></div>
-<div class="quadrado"><input type="button" value="=" onclick="igual()"></div>
+    <h1>Minha Primeira Calculadora</h1>
+<div class="visor"><input type="text" placeholder="VISOR"></input></div>
+<div class="quadrado"><button onclick="porcentagem()">%</button></div>
+<div class="quadrado"><button onclick="zerar()">CE</button></div>
+<div class="quadrado"><button onclick="on_off()">C</button></div>
+<div class="quadrado"><button onclick="back()">DEL</button></div>
+<div class="quadrado"><button onclick="" id="vazio">T</button></button></div>
+<div class="quadrado"><button onclick="potencia()">x²</button></div>
+<div class="quadrado"><button onclick="raiz()">raiz</button></div>
+<div class="quadrado"><button onclick="divisao()">/</button></div>
+<div class="quadrado"><button onclick="preencher(7)">7</button></div>
+<div class="quadrado"><button onclick="preencher(8)">8</button></div>
+<div class="quadrado"><button onclick="preencher(9)">9</button></div>
+<div class="quadrado"><button onclick="multiplicar()">x</button></div>
+<div class="quadrado"><button onclick="preencher(4)">4</button></div>
+<div class="quadrado"><button onclick="preencher(5)">5</button></div>
+<div class="quadrado"><button onclick="preencher(6)">6</button></div>
+<div class="quadrado"><button onclick="subtrair()">-</button></div>
+<div class="quadrado"><button onclick="preencher(1)">1</button></div>
+<div class="quadrado"><button onclick="preencher(2)">2</button></div>
+<div class="quadrado"><button onclick="preencher(3)">3</button></div>
+<div class="quadrado"><button onclick="soma()">+</button></div>
+<div class="quadrado"><button onclick=""  id="vazio">T</button></div>
+<div class="quadrado"><button onclick="preencher(0)">0</button></div>
+<div class="quadrado"><button onclick="virgula()">,</button></div>
+<div class="quadrado"><button onclick="igual()">=</button></div>
 
 </div>    
 </div>
@@ -72,7 +44,6 @@
 
 
 
-<script src="java.js"></script>
 
 </body>
 </html>
