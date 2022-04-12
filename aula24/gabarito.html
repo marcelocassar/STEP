@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+
+div{border: 1px solid black}
+button{ width: 40px; height: 40px; margin: 2px }
+#ivisor{ width: 180px; height: 40px; margin: 2px; text-align: right;}
+
+</style>
+    
+</head>
+<body>
+
+
+<div>
+
+
+	
+	<input id="ivisor" type="text" value=""/>
+	<br>
+	<button onclick="">ON</button>
+	<button onclick="">DEL</button>
+	<button onclick="">OFF</button>
+	<button onclick="operador('/')">/</button>
+	<br>
+	<button onclick="preencher('7')">7</button>
+	<button onclick="preencher('8')">8</button>
+	<button onclick="preencher('9')">9</button>
+	<button onclick="operador('*')">*</button>
+	<br>
+	<button onclick="preencher('4')">4</button>
+	<button onclick="preencher('5')">5</button>
+	<button onclick="preencher('6')">6</button>
+	<button onclick="operador('-')">-</button>
+	<br>
+	<button onclick="preencher('1')">1</button>
+	<button onclick="preencher('2')">2</button>
+	<button onclick="preencher('3')">3</button>
+	<button onclick="operador('+')">+</button>
+	<br>
+	<button onclick="ce()">CE</button>
+	<button onclick="preencher('0')">0</button>
+	<button onclick="preencher('.')">.</button>
+	<button onclick="resultado()">=</button>
+
+</div>
+	
+	
+	<script >
+	var primeiroNum;
+    var segundoNum;
+	var sinal;
+	
+    function preencher(n){// função generica com passagem de argumento
+		   document.getElementById("ivisor").value += n;
+		   }
+
+	function operador(s){
+		   primeiroNum = document.getElementById("ivisor").value;
+		   document.getElementById("ivisor").value = "";
+		   sinal = s;
+		   }
+
+    function resultado(){
+		  segundoNum = document.getElementById("ivisor").value;
+		  let resultado;
+		  switch (sinal) {
+		  case "+":
+				 resultado = Number(primeiroNum) + Number(segundoNum);
+				 document.getElementById("ivisor").value = resultado;
+				break;
+
+		  case "-":
+			    resultado = Number(primeiroNum) - Number(segundoNum);
+				document.getElementById("ivisor").value = resultado;
+				break;
+		  case "*":
+			    resultado = Number(primeiroNum) * Number(segundoNum);
+				document.getElementById("ivisor").value = resultado;
+				break;
+		  case "/":
+			  resultado = Number(primeiroNum) / Number(segundoNum);
+				document.getElementById("ivisor").value = resultado;
+				break;	
+			
+			default:
+				document.getElementById("ivisor").value = "ERRO";
+				break;
+		}
+
+	  }
+		   
+      function ce(){
+        primeiroNum="";
+        operador="";
+        document.getElementById("ivisor"),valeu;
+      }
+
+	</script>
+</body>
+</html>
