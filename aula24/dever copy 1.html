@@ -11,29 +11,29 @@
    
 <div class="calculadora">
     <h1>Minha Primeira Calculadora</h1>
-<div class="visor"><input type="text" placeholder="VISOR"></input></div>
+<div class="visor"><input type="text" placeholder="VISOR" value="" id="ivisor"></input></div>
 <div class="quadrado"><button onclick="porcentagem()">%</button></div>
 <div class="quadrado"><button onclick="zerar()">CE</button></div>
 <div class="quadrado"><button onclick="on_off()">C</button></div>
 <div class="quadrado"><button onclick="back()">DEL</button></div>
 <div class="quadrado"><button onclick="" id="vazio">T</button></button></div>
-<div class="quadrado"><button onclick="potencia()">x²</button></div>
+<div class="quadrado"><button onclick="potencia()">x2</button></div>
 <div class="quadrado"><button onclick="raiz()">raiz</button></div>
 <div class="quadrado"><button onclick="divisao()">/</button></div>
-<div class="quadrado"><button onclick="preencher(7)">7</button></div>
-<div class="quadrado"><button onclick="preencher(8)">8</button></div>
-<div class="quadrado"><button onclick="preencher(9)">9</button></div>
+<div class="quadrado"><button onclick="preencher('7')">7</button></div>
+<div class="quadrado"><button onclick="preencher('8')">8</button></div>
+<div class="quadrado"><button onclick="preencher('9')">9</button></div>
 <div class="quadrado"><button onclick="multiplicar()">x</button></div>
-<div class="quadrado"><button onclick="preencher(4)">4</button></div>
-<div class="quadrado"><button onclick="preencher(5)">5</button></div>
-<div class="quadrado"><button onclick="preencher(6)">6</button></div>
+<div class="quadrado"><button onclick="preencher('4')">4</button></div>
+<div class="quadrado"><button onclick="preencher('5')">5</button></div>
+<div class="quadrado"><button onclick="preencher('6')">6</button></div>
 <div class="quadrado"><button onclick="subtrair()">-</button></div>
-<div class="quadrado"><button onclick="preencher(1)">1</button></div>
-<div class="quadrado"><button onclick="preencher(2)">2</button></div>
-<div class="quadrado"><button onclick="preencher(3)">3</button></div>
+<div class="quadrado"><button onclick="preencher('1')">1</button></div>
+<div class="quadrado"><button onclick="preencher('2')">2</button></div>
+<div class="quadrado"><button onclick="preencher('3')">3</button></div>
 <div class="quadrado"><button onclick="soma()">+</button></div>
 <div class="quadrado"><button onclick=""  id="vazio">T</button></div>
-<div class="quadrado"><button onclick="preencher(0)">0</button></div>
+<div class="quadrado"><button onclick="preencher('0')">0</button></div>
 <div class="quadrado"><button onclick="virgula()">,</button></div>
 <div class="quadrado"><button onclick="igual()">=</button></div>
 
@@ -42,7 +42,14 @@
 
 </div>
 
+<script>
 
+        function preencher(n){
+        document.getElementById("ivisor").value += n;
+    }
+
+
+</script>
 
 
 </body>
