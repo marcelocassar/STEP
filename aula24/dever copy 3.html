@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contra - Cheque</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     2. Faça um HTML para gerar contracheque. Nesta página conterá várias inputs para obter informações do usuário, conforme a lista abaixo:
@@ -34,36 +35,43 @@
     
     Crie também um botão chamado “gerar contracheque”. Ao clicar neste botão, deverá exibir na própria página o modelo de contracheque conforme o modelo abaixo.
     
+<!-- document.write("Seu nome é "    + document.getElementById('nome').value +'.<br>' 
+        + "Pai: "+ document.getElementById('pai').value +'.<br>'
+        + "Mãe: "          + document.getElementById('mae').value +'.<br>'
+        + "Cargo: "        + document.getElementById('cargo').value +'.<br>'
+        + "Salário Brunto: " + document.getElementById('salario-bruto').value +'.<br>'
+        + "Seu Salário Líquido é" + salarioLiquido + '<br>.');  -->
 
+    <br><br>
+    <label for="nome">Nome Completo:</label>
     <input type="text" name="nome" id="nome">
+    <br><br>
+    <label for="pai">Nome do Pai:</label>
     <input type="text" name="pai" id="pai">
+    <br><br>
+    <label for="mae">Nome da Mãe</label>
     <input type="text" name="mae" id="mae">
+    <br><br>
+    <label for="cargo">Cargo: </label>
     <input type="text" name="cargo" id="cargo">
+    <br><br>
+    <label for="salario-bruto">Salário Bruto</label>
     <input type="text" name="salario-bruto" id="salario-bruto">
-    <input type="text" name="nome" id="nome">
-    <input type="text" name="nome" id="nome">
-
-
-
-
-
+    <br><br>
+    <label for="salario-liquido">Salário Liquido</label>
+    <input type="text" name="salario-liquido" id="salario-liquido">
+    <br><br>
     <input type="submit" value="Calcular" onclick="calcular()">
 
 <script>
 
     function calcular(){
-
-       let salarioBruto = Number(document.getElementById('salario-bruto'));
+       let salarioBruto = Number(document.getElementById('salario-bruto').value);
        let fgts = (salarioBruto * 0.08);
-       let inss = (salarioBruto * 0.16);
+       let inss = (salarioBruto * 0.08);
        let salarioLiquido = (salarioBruto - fgts - inss);
-        document.write("Seu nome é "    + document.getElementById('nome').value +'.<br>' 
-        + "Pai: "+ document.getElementById('pai').value +'.<br>'
-        + "Mãe: "          + document.getElementById('mae').value +'.<br>'
-        + "Cargo: "        + document.getElementById('cargo').value +'.<br>'
-        + "Salário Brunto: " + document.getElementById('salario-bruto').value +'.<br>'
-        + "Seu Salário Líquido é" + salarioLiquido + '<br>.');
-        
+       document.getElementById("salario-liquido").value = salarioLiquido
+                     
     }
 
 </script>
