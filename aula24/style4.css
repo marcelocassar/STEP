@@ -3,11 +3,13 @@
     padding: 0;
 }
 
-#form div{
+#form{
     width: 400px;
     text-align: center;  
     display: block;  
     border: 1px solid black;
+    padding: 10px;
+    margin: 0 auto;    
 }
 
 .formulario h1{
@@ -28,7 +30,14 @@
     height: 25px;    
     background-color: lightcyan;    
 }
-        
+
+#masc,#fem {
+    background-color: black;
+    width: 25px;
+    text-align: center;
+}
+
+
 table{
     margin: auto;
     width: 100%;

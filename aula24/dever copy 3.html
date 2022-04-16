@@ -11,28 +11,39 @@
 
 <body>
 
-    <div id="form" class="formulario" style="text-align: center; margin: 0 auto; width: 600px;">
+    <div id="form" class="formulario">
         <h1>Formulário - Contra - Cheque</h1>
         <br><br>
         <label for="nome">Nome Completo:</label>
         <input type="text" name="nome" id="nome">
+        <br><br>        
+        <label for="mae">CPF:</label>
+        <input type="text" name="cpf" id="cpf">
+        <br><br>        
+        <label for="datanasc">Data de Nascimento: </label>
+        <input type="date" name="datanasc" id="datanasc">
+        <br><br>
+        <label for="mes">Mês de Referência:</label>
+        <input type="text" name="mesref" id="mesref"></input>
         <br><br>
         <label for="pai">Nome do Pai:</label>
         <input type="text" name="pai" id="pai">
         <br><br>
-        <label for="mae">Nome da Mãe</label>
+        <label for="mae">Nome da Mãe:</label>
         <input type="text" name="mae" id="mae">
+        <br><br>
+        <label for="sexo">Sexo: </label>
+        <br><br>
+        <input class="radio" type="radio" name="sexo" id="masc">Masculino</input>
+        <input class="radio" type="radio" name="sexo" id="fem">Feminino</input>
         <br><br>
         <label for="cargo">Cargo: </label>
         <input type="text" name="cargo" id="cargo">
         <br><br>
-        <label for="salario-bruto">Salário Bruto</label>
+        <label for="salario-bruto">Salário Bruto:</label>
         <input type="text" name="salario-bruto" id="salario-bruto">
         <br><br>
-        <label for="salario-liquido">Salário Liquido</label>
-        <input type="text" name="salario-liquido" id="salario-liquido">
-        <br><br>
-        <p><input id="enviar" type="submit" value="Calcular" onclick="calcular()"></p>
+        <input id="enviar" type="submit" value="Calcular" onclick="calcular()">
     </div>
 
     <table class="contracheque">
@@ -125,6 +136,17 @@
     <script>
 
         function calcular() {
+           
+            
+            document.getElementById('valornome').value = document.getElementById('nome').value;
+            document.getElementById('valorpai').value = document.getElementById('pai').value;
+            document.getElementById('valormae').value = document.getElementById('mae').value;
+            document.getElementById('valorcargo').value = document.getElementById('cargo').value;
+            document.getElementById('salariobruto').value = document.getElementById('salario-bruto').value;
+            document.getElementById('valornome').value = document.getElementById('nome').value;
+            document.getElementById('valorcpf').value = document.getElementById('cpf').value;
+            document.getElementById('valornasc').value = document.getElementById('datanasc').value;
+            
             let salarioBruto = Number(document.getElementById('salario-bruto').value);
             let fgts = (salarioBruto * 0.08);
             let inss = (salarioBruto * 0.08);
