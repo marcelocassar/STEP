@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,136 +8,137 @@
     <title>Contra - Cheque</title>
     <link rel="stylesheet" href="style4.css">
 </head>
+
 <body>
-    
-  
-    <br><br>
-    <label for="nome">Nome Completo:</label>
-    <input type="text" name="nome" id="nome">
-    <br><br>
-    <label for="pai">Nome do Pai:</label>
-    <input type="text" name="pai" id="pai">
-    <br><br>
-    <label for="mae">Nome da Mãe</label>
-    <input type="text" name="mae" id="mae">
-    <br><br>
-    <label for="cargo">Cargo: </label>
-    <input type="text" name="cargo" id="cargo">
-    <br><br>
-    <label for="salario-bruto">Salário Bruto</label>
-    <input type="text" name="salario-bruto" id="salario-bruto">
-    <br><br>
-    <label for="salario-liquido">Salário Liquido</label>
-    <input type="text" name="salario-liquido" id="salario-liquido">
-    <br><br>
-    <input type="submit" value="Calcular" onclick="calcular()">
+
+    <div id="form" class="formulario" style="text-align: center; margin: 0 auto; width: 600px;">
+        <h1>Formulário - Contra - Cheque</h1>
+        <br><br>
+        <label for="nome">Nome Completo:</label>
+        <input type="text" name="nome" id="nome">
+        <br><br>
+        <label for="pai">Nome do Pai:</label>
+        <input type="text" name="pai" id="pai">
+        <br><br>
+        <label for="mae">Nome da Mãe</label>
+        <input type="text" name="mae" id="mae">
+        <br><br>
+        <label for="cargo">Cargo: </label>
+        <input type="text" name="cargo" id="cargo">
+        <br><br>
+        <label for="salario-bruto">Salário Bruto</label>
+        <input type="text" name="salario-bruto" id="salario-bruto">
+        <br><br>
+        <label for="salario-liquido">Salário Liquido</label>
+        <input type="text" name="salario-liquido" id="salario-liquido">
+        <br><br>
+        <p><input id="enviar" type="submit" value="Calcular" onclick="calcular()"></p>
+    </div>
 
     <table class="contracheque">
 
         <thead>
-            <td colspan="3">x</td>
+            <td colspan="4">Contra Cheque</td>
         </thead>
-        
-         <tr>
-             <td>Nome: </td>
-             <td><input type="text" name="valornome" id="valornome"></input></td>
-             <td>Mês de Referência: </td>
-             <td><input type="text" name="mesref" id="mesref"></input></td>            
-         </tr>
- 
-         <tr>
-             <td>Cargo:</td>
-             <td><input type="text" name="valorcargo" id="valorcargo"></input></td>            
-             <td>CPF:</td>
-             <td><input type="text" name="valorcpf" id="valorcpf"></input></td>            
-         </tr>
- 
-         <tr>
-             <td>Data de Nascimento:</td>
-             <td><input type="date" name="valornasc" id="valornasc"></td></td>
-             <td><input type="text" name="valoridade" id="valoridade" value=""></input></td>
-             <td>Sexo: </td>
-             <td>
-                 <input class="radio" type="radio" name="sexo" id="masc"> Masc</input>
-                 <input class="radio" type="radio" name="sexo" id="fem"> Fem</input>
-                 
-             </td>
-         </tr>
- 
-         <tr>
-             <td>Nome Pai: </td>
-             <td><input type="text" name="valorpai" id="valorpai"></td>
-             <td>Nome Mãe: </td>
-             <td><input type="text" name="valormae" id="valormae"></td>
-         </tr>
- 
-         <tr>
-             <td>Detalhamento</td>
-             
-         </tr>
- 
-         <tr>
-             <td>Itens:</td>
-             <td>Descrição</td>
-             <td>Valor Receita</td>
-             <td>Valor Despesa</td>            
-         </tr>
- 
-         <tr>
-             <td>1</td>
-             <td>Salário Bruto</td>
-             <td><input type="text" name="salariobruto" id="salariobruto"></td>            
-             <td></td>                        
-         </tr>
- 
-         <tr>
-             <td>2</td>
-             <td>FGTS</td>
-             <td>x</td>            
-             <td><input type="text" name="valorfgts" id="valorfgts"></td>            
-         </tr>
- 
-         <tr>
-             <td>3</td>
-             <td>INSS</td>
-             <td>x</td>            
-             <td><input type="text" name="valorinss" id="valorinss"></td>            
-         </tr>
- 
-         <tr>
-             <td></td>
-             <td></td>
-             <td>totalreceita</td>            
-             <td>totaldespesa</td>                        
-         </tr>
- 
-         <tr>
-             <td></td>            
-             <td></td>            
-             <td>Total Líquido: </td>            
-             <td><input type="text" name="salarioliquido" id="salarioliquido"></td>              
-         </tr>
- 
- 
-     </table>
+
+        <tr>
+            <td>Nome: </td>
+            <td><input type="text" name="valornome" id="valornome"></input></td>
+            <td>Mês de Referência: </td>
+            <td><input type="text" name="mesref" id="mesref"></input></td>
+        </tr>
+
+        <tr>
+            <td>Cargo:</td>
+            <td><input type="text" name="valorcargo" id="valorcargo"></input></td>
+            <td>CPF:</td>
+            <td><input type="text" name="valorcpf" id="valorcpf"></input></td>
+        </tr>
+
+        <tr>
+            <td>Data de Nascimento:</td>
+            <td><input type="date" name="valornasc" id="valornasc"></td>
+            </td>
+            <td><input type="text" name="valoridade" id="valoridade" value=""></input></td>
+            <td class="sexo">Sexo:
+                <input class="radio" type="radio" name="sexo" id="masc"> Masc</input>
+                <input class="radio" type="radio" name="sexo" id="fem"> Fem</input>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Nome Pai: </td>
+            <td><input type="text" name="valorpai" id="valorpai"></td>
+            <td>Nome Mãe: </td>
+            <td><input type="text" name="valormae" id="valormae"></td>
+        </tr>
+
+        <thead>
+            <td colspan="4">Detalhamento</td>
+        </thead>
+
+        <tr>
+            <td>Itens:</td>
+            <td>Descrição</td>
+            <td>Valor Receita</td>
+            <td>Valor Despesa</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Salário Bruto</td>
+            <td><input type="text" name="salariobruto" id="salariobruto"></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>FGTS</td>
+            <td>x</td>
+            <td><input type="text" name="valorfgts" id="valorfgts"></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>INSS</td>
+            <td>x</td>
+            <td><input type="text" name="valorinss" id="valorinss"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td></td>
+            <td>totalreceita</td>
+            <td>totaldespesa</td>
+        </tr>
+
+        <tr>
+            <td colspan="3">Total Líquido: </td>           
+            
+            <td><input type="text" name="salarioliquido" id="salarioliquido"></td>
+        </tr>
 
 
-<script>
+    </table>
 
-    function calcular(){
-       let salarioBruto = Number(document.getElementById('salario-bruto').value);
-       let fgts = (salarioBruto * 0.08);
-       let inss = (salarioBruto * 0.08);
-       let salarioLiquido = (salarioBruto - fgts - inss);
-       document.getElementById("salario-liquido").value = salarioLiquido
-                     
-    }
 
-</script>
+    <script>
+
+        function calcular() {
+            let salarioBruto = Number(document.getElementById('salario-bruto').value);
+            let fgts = (salarioBruto * 0.08);
+            let inss = (salarioBruto * 0.08);
+            let salarioLiquido = (salarioBruto - fgts - inss);
+            document.getElementById("salario-liquido").value = salarioLiquido
+
+        }
+
+    </script>
 
 
 
 
 
 </body>
+
 </html>
