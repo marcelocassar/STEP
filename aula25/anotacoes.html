@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel</title>
+</head>
+
+<style>
+
+    .tudo {
+        margin: 0 auto;
+        text-align: center;
+        
+    }
+
+    .divimg{
+        display: inline-block;
+    }
+
+    #peq1,#peq2{
+
+        height: 350px;
+    }
+
+    .botoes input{
+        margin-top: 10px;
+        text-align: center;        
+        height: 75px;
+        width: 90px;
+        font-size: 38px;        
+        font-weight: bolder;
+    }
+
+    .botoes p {
+        margin-top: 25px;        
+        margin-bottom: 15px;        
+        font-size: 38px;
+    }
+
+    img {
+        width: 450px;
+        height: 450px;
+    }
+
+    #anterior,#posterior{
+        height: 75%;
+    }
+
+    .botao {
+        width: 150px;
+        height: 100px;
+        text-align: center;
+        background-color: white;
+        border-radius: 15%;
+        box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.252);
+        font-size: 25px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.329);
+    }
+
+    .botao:hover {
+        background-color: lightseagreen;
+    }
+
+</style>
+
+<body onload="carregar()">
+    
+<div class="tudo">
+    
+       
+    <div class="divimg" id="peq1">
+            <img id="anterior" src="IMAGENS/IMG (0).jpg" alt="">
+    </div>
+
+    <div class="divimg">
+        <img id="image" src="IMAGENS/IMG (1).jpg" alt="">
+    </div>
+
+    <div class="divimg peq" id="peq2">
+        <img id="posterior" src="IMAGENS/IMG (2).jpg" alt="">
+    </div>
+
+
+    <div class="botoes">
+    <button class="botao" onclick="anterior()">Anterior</button>
+    <button class="botao" onclick="proximo()">Próximo</button>
+    <div>
+        <p>ÍNDICE</p>        
+        <input type="text" name="" id="indice">
+    </div>
+    </div>
+</div>
+<script>
+
+    var listaImg = [];
+    listaImg.push("IMAGENS/IMG (0).jpg");
+    listaImg.push("IMAGENS/IMG (1).jpg");
+    listaImg.push("IMAGENS/IMG (2).jpg");
+    listaImg.push("IMAGENS/IMG (3).jpg");
+    listaImg.push("IMAGENS/IMG (4).jpg");
+    listaImg.push("IMAGENS/IMG (5).jpg");
+    listaImg.push("IMAGENS/IMG (6).jpg");
+    listaImg.push("IMAGENS/IMG (7).jpg");
+    listaImg.push("IMAGENS/IMG (8).jpg");
+    listaImg.push("IMAGENS/IMG (9).jpg");
+    listaImg.push("IMAGENS/IMG (10).jpg");
+    
+    var indice = 0;
+
+    function proximo() {
+        indice++;
+        if(indice == listaImg.length){
+            indice=0           
+        }        
+        document.getElementById("image").src = listaImg[indice];
+        document.getElementById("anterior").src = listaImg[indice -1];
+        document.getElementById("posterior").src = listaImg[indice +1];
+        document.getElementById("indice").value = indice;
+    }
+
+    var antes,posterior
+
+    function anterior() {
+        indice--;
+        if(indice == -1){
+            indice = listaImg.length -1;            
+        }
+        
+        antes = indice -1
+        if (antes == -1) {
+            antes = listaImg.length -1;
+        }
+        posterior = indice +1        
+        if (posterior == +1) {
+            posterior = listaImg[0];
+        }
+        
+        document.getElementById("image").src = listaImg[indice];
+        document.getElementById("anterior").src = antes;
+        document.getElementById("posterior").src = posterior;
+        document.getElementById("indice").value = indice;
+    }
+
+    function carregar(){
+        indice = 1
+        document.getElementById("indice").value = indice;
+    }
+
+</script>
+
+
+</body>
+</html>
