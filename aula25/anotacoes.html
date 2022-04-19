@@ -9,6 +9,24 @@
 
 <style>
 
+    body {
+        padding-top: 75px;
+    }    
+
+    h1 {
+
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px;
+        margin-bottom: 30px;
+        font-size: 78px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-shadow: 5px 4px 3px rgba(7, 56, 14, 0.481);
+        color: rgb(26, 88, 67);
+
+
+    }
+
     .tudo {
         margin: 0 auto;
         text-align: center;
@@ -17,20 +35,18 @@
 
     .divimg{
         display: inline-block;
-    }
-
-    #peq1,#peq2{
-
-        height: 350px;
+        margin-bottom: 45px;
     }
 
     .botoes input{
-        margin-top: 10px;
+        
         text-align: center;        
         height: 75px;
         width: 90px;
         font-size: 38px;        
         font-weight: bolder;
+        margin: 21px;
+        
     }
 
     .botoes p {
@@ -44,8 +60,19 @@
         height: 450px;
     }
 
-    #anterior,#posterior{
-        height: 75%;
+    #anterior{
+        
+        border-radius: 65% 0% 0% 25%;
+        box-shadow: -20px -15px 10px rgba(0, 0, 0, 0.458);
+        margin-right: -4px;
+    }
+
+    #posterior{
+        
+        border-radius: 0% 65% 25% 0%;
+        box-shadow: 20px -15px 10px rgba(0, 0, 0, 0.458);
+        margin-left: -4px;
+
     }
 
     .botao {
@@ -63,10 +90,18 @@
         background-color: lightseagreen;
     }
 
+    .controle div{
+        display: inline-block;
+        margin: 30px;
+
+    }
+
 </style>
 
 <body onload="carregar()">
-    
+
+<h1>First Carousel Slideshow</h1>
+
 <div class="tudo">
     
        
@@ -86,10 +121,23 @@
     <div class="botoes">
     <button class="botao" onclick="anterior()">Anterior</button>
     <button class="botao" onclick="proximo()">Próximo</button>
-    <div>
-        <p>ÍNDICE</p>        
-        <input type="text" name="" id="indice">
+    <div class="controle">        
+        <div>
+            <p>ANTERIOR</p>
+            <input type="text" name="" id="ant">
+        </div>
+        <div>
+            <p>ÍNDICE</p>
+            <input type="text" name="" id="indice">
+        </div>
+        <div>
+            <p>POSTERIOR</p>
+            <input type="text" name="" id="post">
+        </div>
+        
     </div>
+
+
     </div>
 </div>
 <script>
@@ -110,19 +158,38 @@
     var indice = 0;
 
     function proximo() {
+       let posterior,antes
+       
         indice++;
-        if(indice == listaImg.length){
+        
+        if(indice >= listaImg.length){
             indice=0           
-        }        
+        }
+        
+        posterior = indice + 1
+
+        if (posterior >= listaImg.length){
+            posterior = 0;
+        }
+
+        antes = indice -1
+
+        if (antes == -1){
+            antes = listaImg.length -1
+        }
+        
         document.getElementById("image").src = listaImg[indice];
-        document.getElementById("anterior").src = listaImg[indice -1];
-        document.getElementById("posterior").src = listaImg[indice +1];
+        document.getElementById("anterior").src = listaImg[antes];
+        document.getElementById("posterior").src = listaImg[posterior];
         document.getElementById("indice").value = indice;
+        document.getElementById("post").value = posterior;
+        document.getElementById("ant").value = antes;
     }
 
-    var antes,posterior
-
+    
     function anterior() {
+        let posterior,antes
+        
         indice--;
         if(indice == -1){
             indice = listaImg.length -1;            
@@ -133,14 +200,16 @@
             antes = listaImg.length -1;
         }
         posterior = indice +1        
-        if (posterior == +1) {
-            posterior = listaImg[0];
+        if (posterior == listaImg.length) {
+            posterior = 0;
         }
         
         document.getElementById("image").src = listaImg[indice];
-        document.getElementById("anterior").src = antes;
-        document.getElementById("posterior").src = posterior;
+        document.getElementById("anterior").src = listaImg[antes];
+        document.getElementById("posterior").src = listaImg[posterior];
         document.getElementById("indice").value = indice;
+        document.getElementById("post").value = posterior;
+        document.getElementById("ant").value = antes;
     }
 
     function carregar(){
