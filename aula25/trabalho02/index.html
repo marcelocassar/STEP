@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Carousel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregar()">
+<header>
+<h1>Carrossel</h1>
+</header>
+
+<main>
+
+<div class="carrossel">
+
+<div class="peq"><img src="./imagens/0.png" alt="" id="0"></div>
+<div class="grande"><img src="./imagens/1.png" alt="" id="1"></div>
+<div class="peq"><img src="./imagens/2.png" alt="" id="2"></div>
+
+</div>
+
+<div class="botoes">
+
+    <div class="botao"><button onclick="anterior()">Anterior</button></div>
+    <div class="botao"><button onclick="posterior()">Posterior</button></div>
+
+</div>
+<div class="indices">
+
+    <div><p>Anterior</p>
+        <input type="text" name="" id="antes"></div>
+    <div><p>Meio</p>
+        <input type="text" name="" id="meio"></div>
+    <div><p>Posterior</p>
+        <input type="text" name="" id="ultimo"></div>
+
+</div>
+</main>
+
+<script>
+
+    var indice = 1
+
+    function carregar(){
+
+        document.getElementById("antes").value = indice -1
+
+        document.getElementById("meio").value = indice -1
+
+        document.getElementById("ultimo").value = indice +1
+
+    }
+
+</script>
+
+
+</body>
+</html>
