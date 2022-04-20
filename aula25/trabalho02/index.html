@@ -43,16 +43,53 @@
 <script>
 
     var indice = 1
+    var depois = indice +1
+    var anterior = indice -1
+    var listaImg = [];
+
+    listaImg.push("./imagens/0.png");
+    listaImg.push("./imagens/1.png");
+    listaImg.push("./imagens/2.png");
+    listaImg.push("./imagens/3.png");
+    listaImg.push("./imagens/4.png");
+    listaImg.push("./imagens/5.png");
+    listaImg.push("./imagens/6.png");
+    listaImg.push("./imagens/7.png");
+    listaImg.push("./imagens/8.png");
+    listaImg.push("./imagens/9.png");
 
     function carregar(){
-
         document.getElementById("antes").value = indice -1
-
-        document.getElementById("meio").value = indice -1
-
+        document.getElementById("meio").value = indice
         document.getElementById("ultimo").value = indice +1
-
     }
+
+    function posterior(){
+        indice = indice + 1
+        
+       
+                
+        if (indice >= listaImg.length){
+            indice = 0
+        }
+
+        depois = indice + 1
+
+        if (depois >= listaImg.length){
+            depois = 0
+        }
+       
+        anterior = indice -1
+
+        if (anterior == -1){
+            anterior = listaImg.length -1
+        }
+
+        document.getElementById("antes").value = anterior
+        document.getElementById("meio").value = indice
+        document.getElementById("ultimo").value = depois
+    }
+
 
 </script>
 
