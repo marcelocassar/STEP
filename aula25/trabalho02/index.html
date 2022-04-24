@@ -24,7 +24,7 @@
 
 <div class="botoes">
 
-    <div class="botao"><button onclick="anterior()">Anterior</button></div>
+    <div class="botao"><button onclick="anterior()"></button></div>
     <div class="botao"><button onclick="posterior()">Posterior</button></div>
 
 </div>
@@ -59,13 +59,14 @@
     listaImg.push("./imagens/9.png");
 
     function carregar(){
-        document.getElementById("antes").value = indice -1
-        document.getElementById("meio").value = indice
-        document.getElementById("ultimo").value = indice +1
+        document.getElementById("antes").value = indice -1;
+        document.getElementById("meio").value = indice;
+        document.getElementById("ultimo").value = indice +1;
     }
 
     function posterior(){
-        indice = indice + 1
+        indice = indice + 1;
+        let antes, depois
         
        
                 
@@ -73,21 +74,34 @@
             indice = 0
         }
 
-        depois = indice + 1
+        depois = indice + 1;
 
         if (depois >= listaImg.length){
             depois = 0
         }
        
-        anterior = indice -1
+        antes = indice -1;
 
-        if (anterior == -1){
-            anterior = listaImg.length -1
+        if (antes == -1){
+            antes = listaImg.length -1
         }
 
-        document.getElementById("antes").value = anterior
-        document.getElementById("meio").value = indice
-        document.getElementById("ultimo").value = depois
+        document.getElementById("antes").value = antes;
+        document.getElementById("meio").value = indice;
+        document.getElementById("ultimo").value = depois;
+    }
+
+    function anterior(){
+        indice = indice - 1;
+        let antes, depois
+
+        if (indice == -1) {
+            indice = listaImg.length -1
+        } 
+
+        document.getElementById("antes").value = antes;
+        document.getElementById("meio").value = indice;
+        document.getElementById("ultimo").value = depois;
     }
 
 
