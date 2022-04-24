@@ -24,19 +24,19 @@
 
 <div class="botoes">
 
-    <div class="botao"><button onclick="anterior()"></button></div>
+    <div class="botao"><button onclick="anterior()">Anterior</button></div>
     <div class="botao"><button onclick="posterior()">Posterior</button></div>
 
 </div>
 <div class="indices">
 
     <div><p>Anterior</p>
-        <input type="text" name="" id="antes"></div>
+        <input type="text" name="" id="um"></div>
     <div><p>Meio</p>
-        <input type="text" name="" id="meio"></div>
+        <input type="text" name="" id="dois"></div>
     <div><p>Posterior</p>
-        <input type="text" name="" id="ultimo"></div>
-
+        <input type="text" name="" id="tres"></div>
+  
 </div>
 </main>
 
@@ -44,7 +44,6 @@
 
     var indice = 1
     var depois = indice +1
-    var anterior = indice -1
     var listaImg = [];
 
     listaImg.push("./imagens/0.png");
@@ -59,16 +58,18 @@
     listaImg.push("./imagens/9.png");
 
     function carregar(){
-        document.getElementById("antes").value = indice -1;
-        document.getElementById("meio").value = indice;
-        document.getElementById("ultimo").value = indice +1;
+        document.getElementById("um").value = indice -1;
+        document.getElementById("dois").value = indice;
+        document.getElementById("tres").value = indice +1;
+
+        document.getElementById('0').src = listaImg[0]
+        document.getElementById('1').src = listaImg[1]
+        document.getElementById('2').src = listaImg[2]
     }
 
     function posterior(){
         indice = indice + 1;
         let antes, depois
-        
-       
                 
         if (indice >= listaImg.length){
             indice = 0
@@ -86,22 +87,42 @@
             antes = listaImg.length -1
         }
 
-        document.getElementById("antes").value = antes;
-        document.getElementById("meio").value = indice;
-        document.getElementById("ultimo").value = depois;
+        document.getElementById("um").value = antes;
+        document.getElementById("dois").value = indice;
+        document.getElementById("tres").value = depois;
+
+        document.getElementById('0').src = listaImg[antes]
+        document.getElementById('1').src = listaImg[indice]
+        document.getElementById('2').src = listaImg[depois]
+
     }
 
     function anterior(){
-        indice = indice - 1;
+        indice = indice - 1;        
         let antes, depois
+        antes = indice -1;
+        depois = indice +1;
 
         if (indice == -1) {
             indice = listaImg.length -1
         } 
 
-        document.getElementById("antes").value = antes;
-        document.getElementById("meio").value = indice;
-        document.getElementById("ultimo").value = depois;
+        if (antes == -1){
+            antes = listaImg.length -1
+        }
+
+        if (antes == -2){
+            antes = 8;
+        }
+
+
+        document.getElementById("um").value = antes;
+        document.getElementById("dois").value = indice;
+        document.getElementById("tres").value = depois;
+
+        document.getElementById('0').src = listaImg[antes]
+        document.getElementById('1').src = listaImg[indice]
+        document.getElementById('2').src = listaImg[depois]
     }
 
 

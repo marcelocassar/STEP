@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+header h1{
+    text-align: center;
+}
+
 main .carrossel, 
 main .botoes, 
 main .indices{
@@ -22,6 +26,10 @@ main .indices{
     height: 50px;
     text-align: center;
     border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 1px 1px 1px 1px black;
+    background-color: rgba(255, 55, 0, 0.22);
 }
 
 .grande img{
@@ -29,18 +37,43 @@ main .indices{
     height: 70px;
     text-align: center;
     border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 1px 1px 1px 1px black;
+    background-color: rgba(0, 0, 255, 0.22);
+    
 }
+
 
 .botoes div{
     margin: 5px;
     display: inline;       
 }
 
+
+.botoes button{
+    background-color: rgba(127, 255, 212, 0.19);
+    border: none;
+    padding: 30px;    
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.153);
+    border-radius: 15px;
+}
+
+.botoes button:hover{
+   background-color: rgba(245, 245, 220, 0.348);
+}
+
+
 .indices div{
     margin: 10px;
     display: inline-block;     
 }
 
+
+
 .indices input{
     width: 50px;
+    text-align: center;
+    padding: 5px;    
 }
