@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando Strings</title>
+</head>
+<body>
+    <h1>Primeiro exercício</h1>
+    <script>
+        var frase = "Bom dia Alunos.";
+        document.write("String: " + frase);
+        document.write("<br> O tamanho da String é "  + frase.length);
+        document.write("<br> o Índice 0 da String é " + frase.charAt(0));
+        document.write("<br> o Índice 0 da String é " + "Bom dia Alunos.".charAt(0));
+        document.write("<br> Índice 11 da String é " + frase.charAt(11));
+        document.write("<br> Índice 11 da String é " + frase.charAt(16));
+        document.write("<br> Índice 11 da String é " + frase.charAt(-1));
+        document.write("<br> Índice 11 da String é " + frase[14]);
+    </script>
+<h1>Segundo exercício</h1>
+<script>
+    frase = "Bom dia Alunos!";
+    for (let indice = 0; indice < frase.length; indice++) {
+        document.write("<br> " + "o indice é " + frase.charAt(indice));
+    }
+    document.write("<br> " + frase.toUpperCase())
+</script>
+<h1>Terceiro exercício - indexOf()</h1>
+<script>
+    frase = "Bom dia Alunos!";
+    document.write("<br> A frase é: " + frase)
+    document.write("<br> Localizando -Bom- na frase: " + frase.indexOf("Bom"));
+    document.write("<br> A letra O aparece por último em: " + frase.lastIndexOf(o));
+
+</script>
+<h1>Quarto exercício - indexOf() e Includes</h1>
+<script>
+    frase = "Bom dia Alunos!";
+    document.write("<br> A frase é: " + frase)
+    document.write("<br> Localizando -Bom- na frase: " + frase.indexOf("Bom"));
+    document.write("<br> A letra O aparece por último em: " + frase.lastIndexOf("o"));
+    document.write("<br> Localizando -Bom- na frase: " + frase.includes("Bom"));
+    document.write("<br> A letra O aparece por último em: " + frase.includes("o"));
+</script>
+<h1>Quinto exercício - Replace</h1>
+<script>
+    frase = "Bom dia Alunos!";
+    document.write("<br> A frase é: " + frase)
+    document.write("<br> Replace por Boa noite: " + frase.replace("Bom dia", "Boa Noite"));
+    
+</script>
+
+</script>
+<h1>Quinto exercício - Repeat</h1>
+<script>
+    frase = "<br>Bom dia Alunos!";
+    document.write("<br> A frase é: " + frase)
+    document.write("<br> Repeat 5 vezes" + frase.repeat(5));
+    
+</script>
+<h1>Sexto exercício - Corrindo Nome</h1>
+<input type="text" id="inome" onblur="verificarNome()">
+
+<script>
+
+    function verificarNome(){
+    let nome = document.getElementById("inome").value;
+    nome = nome.trim();
+    while (nome.includes("  ")){
+        nome = nome.replace("  ", " ");
+    }
+
+
+
+    document.getElementById("inome").value = nome;
+}
+</script>
+
+
+
+</body>
+</html>
