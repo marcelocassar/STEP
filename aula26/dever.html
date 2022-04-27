@@ -8,27 +8,52 @@
     <title>Formulário</title>
 </head>
 
-<body>
+<style>
 
+    input {
+
+        width: 300px;
+
+    }
+
+
+</style>
+
+<body>
+    <label for="">Nome:</label>
+    <br>
     <input type="text" id="inome" onblur="verificarNome()">
+    <br>
+    <label for="">CPF: </label>
+    <br>
     <input type="text" id="iCPF" onblur="verificarCpf()">
+    <br>
+    <label for="">E-mail</label>
+    <br>    
     <input type="text" id="iemail" onblur="verificarEmail()">
+    <br>
+    <label for="">Telefone</label>
+    <br>
     <input type="text" id="itelefone" onblur="verificarTelefone()">
-    <input type="text" id="icidade" onblur="verificarCidade()">
+    <br>
+    <label for="">Estado</label>
+    <br>
+    <input type="text" id="iEstado" onblur="verificarCidade()">
+    <br>
 
 
     <script>
         function verificarNome() {
             let nome = document.getElementById('inome').value;
-            
+
             nome = nome.trim();
-            
+
             while (nome.includes("  ")) {
-                nome = nome.replace("  "," ")
+                nome = nome.replace("  ", " ")
             }
-            
+
             nome = nome.toUpperCase();
-              
+
             if (nome.includes("1")
                 || nome.includes("2")
                 || nome.includes("3")
@@ -46,28 +71,101 @@
                 || nome.includes("@")
                 || nome.includes("`")
             ) {
-                document.getElementById('inome').value = "Erro";                
+                document.getElementById('inome').value = "Erro - Caracter Não Autorizado";
             } else {
                 document.getElementById('inome').value = nome;
             }
 
-           
 
-            var indice = Number(nome.indexOf(" ")); 
-            var total = nome.length - indice 
-           
-            if (indice <= 2){
-                document.getElementById('inome').value = "Erro - 01";           
+            var indice = Number(nome.indexOf(" "));
+            var total = nome.length - indice
+
+            if (indice <= 2) {
+                document.getElementById('inome').value = "Erro - Primeiro Nome menor que 3";
             }
 
-            var priPalavra = indice -1 
-            var total2 = nome.length - priPalavra -1; 
+            var secPalavra = nome.length - indice - 1;
 
-            if (total2 < 2){ 
-                document.getElementById('inome').value = "Erro - 02";                
+            if (secPalavra <= 2) {
+                document.getElementById('inome').value = "Erro - Segundo Nome Menor que 3";
             }
 
         }
+
+        function verificarCpf() {
+            var cpf = document.getElementById('iCPF').value
+
+            cpf = Number(cpf);
+            //esse aqui não consegui fazer funcionar
+            if (cpf == NaN) {
+                document.getElementById('iCPF').value = "Erro - Não digitou um número";
+            } 
+
+            if (cpf.length != 11) {
+                document.getElementById('iCPF').value = "Erro - Número de digitos diferente de 11.";
+            } 
+
+        }
+
+        function verificarEmail() {
+
+            var email = document.getElementById('iemail').value;
+
+       
+            if (email.includes("@hotmail.com")
+                || email.includes("@gmail.com")
+                || email.includes(".com.br!")
+                || email.includes(".com")
+            ) {
+
+                document.getElementById('iemail').value = email;
+            } else {
+                document.getElementById('iemail').value = "E-mail inválido";
+            }
+
+            if (email.includes(",")
+                || email.includes("#")
+                || email.includes("!")
+                || email.includes(")")
+                || email.includes("&")) {
+                document.getElementById('iemail').value = "Erro - Caracter Inválido";
+            } else {
+                document.getElementById('iemail').value = email;
+            }
+        }
+        // mesmo problema do CPF
+        function verificarTelefone(){
+            var telefone = document.getElementById('itelefone').value;
+
+            if (telefone.length <= 9){
+                
+                document.getElementById('itelefone').value = "Você digitou menos de 9 dígitos";
+               
+            } else {
+
+                document.getElementById('itelefone').value = telefone
+
+            }
+        }
+
+        function verificarCidade(){
+            estado = document.getElementById('iEstado').value
+
+            if (estado.includes("RJ")
+                || estado.includes("SP")
+                || estado.includes("ES")
+                || estado.includes("PE")
+                || estado.includes("AM")
+                || estado.includes("MG")                
+            ) {
+                document.getElementById('inome').value = nome;
+                
+            } else {
+                document.getElementById('iEstado').value = "Erro - Não digitou uma sigla de Estado Válida.";
+            }
+
+        }
+
     </script>
 
 </body>
