@@ -7,6 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    
+    Primeiro Nome
+    <input type="text" name="" id="iprimeironome">
+    Segundo Nome
+    <input type="text" name="" id="isegundonome">
+    Terceiro Nome
+    <input type="text" name="" id="isobrenome">
+
+
+
     <script>
     function verificarNome(){
         var nome = document.getElementById("inome").value;
@@ -18,12 +28,13 @@
         }
 
         if (!nome.includes(" ")){
-            document.getElementById("ipprimeironome").value;
-            document.getElementById("ierronome").innerHTML;
+            document.getElementById("iprimeironome").value = nome;
+            document.getElementById("ierronome").innerHTML = "não há 2 nomes";
         } else{
             if (nome.indexOf(" ") == nome.lastIndexOf(" "))
             var indice = nome.indexOf(" ");
-            document.getElementById("primeironome").value;
+            document.getElementById("iprimeironome").value = nome.substring(0,indice);
+            document.getElementById("isobrenome").value = nome.substring(indice+1);            
         }
 
     }
