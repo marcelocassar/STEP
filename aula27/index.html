@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function verificarNome(){
+        var nome = document.getElementById("inome").value;
+        nome = nome.trim();
+        document.getElementById("inome") = nome;
+        
+        if (nome.length >=3){
+            document.getElementById("ierronome").innerHTML = "";
+        }
+
+        if (!nome.includes(" ")){
+            document.getElementById("ipprimeironome").value;
+            document.getElementById("ierronome").innerHTML;
+        } else{
+            if (nome.indexOf(" ") == nome.lastIndexOf(" "))
+            var indice = nome.indexOf(" ");
+            document.getElementById("primeironome").value;
+        }
+
+    }
+    </script>
+
+</body>
+</html>
