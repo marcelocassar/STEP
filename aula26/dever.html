@@ -40,6 +40,10 @@
     <br>
     <input type="text" id="iEstado" onblur="verificarCidade()">
     <br>
+    <label for="">Teste</label>
+    <br>    
+    <input type="text" id="iteste">
+    <br>
 
 
     <script>
@@ -93,17 +97,21 @@
         }
 
         function verificarCpf() {
-            var cpf = document.getElementById('iCPF').value
+            var cpf = document.getElementById('iCPF').value;            
+
+            cpf = cpf.trim();
 
             cpf = Number(cpf);
-            //esse aqui não consegui fazer funcionar
-            if (cpf == NaN) {
-                document.getElementById('iCPF').value = "Erro - Não digitou um número";
-            } 
 
-            if (cpf.length != 11) {
-                document.getElementById('iCPF').value = "Erro - Número de digitos diferente de 11.";
-            } 
+            if (isNaN(cpf) == true){
+
+                document.getElementById('iCPF').value = "Deu Ruim";
+
+            }
+
+            document.getElementById('iteste').value = cpf.length;
+            
+            document.getElementById('iCPF').value=cpf;
 
         }
 
