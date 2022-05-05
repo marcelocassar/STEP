@@ -83,6 +83,12 @@
         <label for="">Estado</label>
         
         <input type="text" id="iEstado" onblur="verificarCidade()">
+        <br>
+
+        
+        <label for="">Placa do Carro</label>
+        
+        <input type="text" id="iPlaca" onblur="verificarPlaca()">
         
         <br>
 
@@ -233,6 +239,17 @@
             }
 
         }
+
+        function verificarPlaca(){
+            var placa = document.getElementById('Iplaca').value;
+            placa = placa.trim();   
+            if (placa.length != 7){
+                placa = "Placa digitada Errada"
+            }
+            
+
+        }
+
 
     </script>
 
