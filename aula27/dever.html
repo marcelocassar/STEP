@@ -52,206 +52,63 @@
 
 <body>
     
-    <h1>Formulário de Cadastro</h1>
+   <form action="">
+
+    <label for="inome">Nome Completo</label>
+    <input type="text" id="inome">
+    <br>
+
+    <label for="icpf">CPF:</label>
+    <input type="text" name="" id="icpf" onblur="tratarcpf('icpf')">
+    <br>
+
+    <label for="itelefone">Telefone:</label>
+    <input type="text" name="" id="itelefone">
+    <br>
+
+    <label for=""></label>
+    <input type="text" name="" id="">
+    <br>
+
+    <label for=""></label>
+    <input type="text" name="" id="">
+    <br>
+
+   </form>
+
+   <script>
+
+  
     
-    <div>
 
-        <label for="">Nome:</label>
+    function tratarpontos(num) {
         
-        <input type="text" id="inome" onblur="verificarNome()">
         
-        <br>        
-        
-        <label for="">CPF: </label>
-        
-        <input type="text" id="iCPF" onblur="verificarCpf()">
-        
-        <br>
-        
-        <label for="">E-mail</label>
-        
-        <input type="text" id="iemail" onblur="verificarEmail()">
-        
-        <br>
-        
-        <label for="">Telefone</label>
-        
-        <input type="text" id="itelefone" onblur="verificarTelefone()">
-        
-        <br>
-        
-        <label for="">Estado</label>
-        
-        <input type="text" id="iEstado" onblur="verificarCidade()">
-        <br>
-
-        
-        <label for="">Placa do Carro</label>
-        
-        <input type="text" id="iPlaca" onblur="verificarPlaca()">
-        
-        <br>
-
-        <input id="iEnviar" type="submit" value="Enviar">
-
-    </div>
- 
-
-    <script>
-        function verificarNome() {
-            let nome = document.getElementById('inome').value;
-
-            nome = nome.trim();
-
-            while (nome.includes("  ")) {
-                nome = nome.replace("  ", " ")
+        for (let index = 0; index < num.length; index++){
+            let aux2 = num.charAt(index);
+            if (aux2 == "-" || aux2 == "."){
+                num.replace(num[index], "");
+                
             }
-
-            nome = nome.toUpperCase();
-
-            if (nome.includes("1")
-                || nome.includes("2")
-                || nome.includes("3")
-                || nome.includes("4")
-                || nome.includes("5")
-                || nome.includes("6")
-                || nome.includes("7")
-                || nome.includes("9")
-                || nome.includes("0")
-                || nome.includes("~")
-                || nome.includes("^")
-                || nome.includes("$")
-                || nome.includes("#")
-                || nome.includes("!")
-                || nome.includes("@")
-                || nome.includes("`")
-            ) {
-                document.getElementById('inome').value = "Erro - Caracter Não Autorizado";
-            } else {
-                document.getElementById('inome').value = nome;
-            }
-
-
-            var indice = Number(nome.indexOf(" "));
-            var total = nome.length - indice
-
-            if (indice <= 2) {
-                document.getElementById('inome').value = "Erro - Primeiro Nome menor que 3";
-            }
-
-            var secPalavra = nome.length - indice - 1;
-
-            if (secPalavra <= 2) {
-                document.getElementById('inome').value = "Erro - Segundo Nome Menor que 3";
-            }
-
         }
 
-        function verificarCpf() {
-            var cpf = document.getElementById('iCPF').value;
+        let aux = document.getElementById(num).value;
 
-            cpf = cpf.trim();
+        aux = aux.trim();
 
-            cpf = Number(cpf);
+        document.getElementById(num).value = aux;
+    
 
-            if (isNaN(cpf)) {
+      
+    }
 
-                cpf = "Apenas Números"
-            } else {
+    function tratarcpf(num){
+        tratarpontos(num);
 
-                cpf = cpf.toString();
-               
+    }
 
-                if (cpf.length != 11) {
+   </script>
 
-                    cpf = "Número diferente de 11.";
-                }
-
-            }
-
-            document.getElementById('iCPF').value = cpf;
-        }
-
-        function verificarEmail() {
-
-            var email = document.getElementById('iemail').value;
-
-
-            if 
-            (email.includes("@hotmail.com") || 
-            email.includes("@gmail.com") || 
-            email.includes(".com.br") || 
-            email.includes(".com")) 
-            {
-                document.getElementById('iemail').value = email;
-            } else {
-                document.getElementById('iemail').value = "Você digitou errado";
-            }
-
-            if 
-            (email.includes(",") || 
-            email.includes("#") || 
-            email.includes("!") || 
-            email.includes(")") || 
-            email.includes("&")) 
-            {
-                document.getElementById('iemail').value = "Erro - Caracter Inválido";
-
-            } 
-        }
-
-        function verificarTelefone() {
-            var telefone = document.getElementById('itelefone').value;
-
-            telefone = telefone.trim();
-
-            cpf = Number(cpf);
-
-            if (isNaN(cpf)){
-                telefone = "Apenas Números"
-
-            } else {
-                cpf = cpf.toString();                
-
-                if (cpf.length != 9){
-                    telefone = "Digitem 9 dígitos: "
-                }
-            }
-
-            document.getElementById('itelefone').value = telefone;
-
-        }
-
-        function verificarCidade() {
-            estado = document.getElementById('iEstado').value
-
-            if (estado.includes("RJ")
-                || estado.includes("SP")
-                || estado.includes("ES")
-                || estado.includes("PE")
-                || estado.includes("AM")
-                || estado.includes("MG")
-            ) {
-                document.getElementById('inome').value = nome;
-
-            } else {
-                document.getElementById('iEstado').value = "Erro - Não digitou uma sigla de Estado Válida.";
-            }
-
-        }
-
-        function verificarPlaca(){
-            var placa = document.getElementById('Iplaca').value;
-            placa = placa.trim();   
-            if (placa.length != 7){
-                placa = "Placa digitada Errada"
-            }
-            
-
-        }
-
-
-    </script>
 
 </body>
 
