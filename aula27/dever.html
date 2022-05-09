@@ -60,6 +60,7 @@
 
     <label for="icpf">CPF:</label>
     <input type="text" name="" id="icpf" onblur="tratarcpf('icpf')">
+    <p id="ierrocpf"></p>
     <br>
 
     <label for="itelefone">Telefone:</label>
@@ -95,15 +96,50 @@
 
         aux = aux.trim();
 
-        document.getElementById(num).value = aux;
-    
-
-      
+        document.getElementById(num).value = aux;      
     }
+
+    function tratarnumeros(num){
+        let aux = document.getElementById(num).value.trim;
+        let cont = 0;
+        for (let i = 0; i <num.length;i++){
+            let aux2 = num.charAt(i);
+            switch (aux2){
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                case "6":
+                case "7":
+                case "8":
+                case "9":
+                case "0":
+                    cont++;
+                    break;
+            }
+        }
+        if (num.length == cont) {
+            // verificando se são todos números.
+
+        } else {
+            get.getElementById('ierrocpf').innerHTML = "CPF com dígitos inválidos." 
+            //aviso de erro - há caracter inválido
+        }
+
+        if (cpf.length == 11){
+            document.
+        } else {
+            get.getElementById('ierrocpf').innerHTML = "CPF não possui 11 dígitos." 
+
+        }
+
+    }
+
+    
 
     function tratarcpf(num){
         tratarpontos(num);
-
     }
 
    </script>

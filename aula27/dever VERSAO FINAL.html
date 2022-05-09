@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versão Final</title>
+</head>
+<body>
+    
+    <form action="">
+
+        <label for="">Nome Completo</label>
+        <input type="text" id="inome">
+        <br>
+        
+        <label for="">CPF</label>
+        <input type="text" id="icpf" onblur="verificarCPF()">
+        <p id="ierrocpf"></p>
+        <br>      
+
+        <label for="">Telefone:</label>
+        <input type="text" id="itel">
+        <br>
+        
+        <label for=""></label>
+        <input type="text" id="">
+        <br>
+
+        <label for=""></label>
+        <input type="text" id="">
+        <br>
+
+        <label for=""></label>
+        <input type="text" id="">
+        <br>
+
+    </form>
+
+<script>
+
+    function verificarCPF(){
+        let cpf = document.getElementById('icpf').value.trim();
+        let cont = 0;
+        for (let i = 0; i<cpf.length;i++){
+            let aux = cpf.charAt(i);            
+            switch (aux) {
+                case "1": case "2": case "3": case "4": case "5": 
+                case "6": case "7": case "8": case "9": case "0":
+                    cont++;
+            }
+        } //fim do for
+        
+        if (cpf.length == cont){
+            //verificando se são todos números
+            document.getElementById("ierrocpf").innerHTML = "xxx";
+
+            // verificar se tem 11 dígitos
+            if (cpf.length==11){
+                let aux = cpf.
+
+            }else {
+                document.getElementById("ierrocpf").innerHTML = "Não possui 11 dígitos.";
+            
+
+        } else{
+            // há caracter inválido - minuto 22:59 da aula
+            document.getElementById("ierrocpf").innerHTML = "Você não digitou números.";
+        }        
+    }
+}
+
+// parei mais ou menos no minuto 29, não consegui descobrir aonde errei nas chaves do if else que ele quer que faça.
+
+</script>
+
+</body>
+</html>
