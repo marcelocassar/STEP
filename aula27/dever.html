@@ -87,8 +87,7 @@
         for (let index = 0; index < num.length; index++){
             let aux2 = num.charAt(index);
             if (aux2 == "-" || aux2 == "."){
-                num.replace(num[index], "");
-                
+                num.splice(index, 1);                
             }
         }
 
