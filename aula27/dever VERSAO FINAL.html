@@ -1,78 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Versão Final</title>
 </head>
+
+<style>
+  
+
+    label {
+      
+        min-width: 102px;
+        max-width: 102px;
+        margin-right: 20px;
+        display: inline-block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      
+    }
+
+    div {
+        
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 30px;
+        background-color: rgba(163, 108, 111, 0.373);
+        max-width: 450px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.165);
+        box-shadow: 4px 5px 12px rgba(36, 151, 213, 0.275);
+
+    }
+
+    h1 {
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 30px;
+        font-size: 30px;
+        color: blue;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    #iEnviar {
+        margin: 10px;
+    }
+
+</style>
+
 <body>
-    
+
     <form action="">
 
         <label for="">Nome Completo</label>
-        <input type="text" id="inome">
+        <input type="text" id="inome" onblur="verificarNome()">
         <br>
-        
+
         <label for="">CPF</label>
-        <input type="text" id="icpf" onblur="verificarCPF()">
-        <p id="ierrocpf"></p>
-        <br>      
+        <input type="text" id="icpf" onblur="verificarCPF()" onkeypress="pressCPF()">
+        <p id="ierrocpf"></p>A
+        <br>
 
         <label for="">Telefone:</label>
-        <input type="text" id="itel">
+        <input type="text" id="itelefone" onblur="verificarTelefone()">
         <br>
-        
-        <label for=""></label>
+
+        <label for="">Placa: </label>
         <input type="text" id="">
         <br>
 
-        <label for=""></label>
-        <input type="text" id="">
+        <label for="">Cidade</label>
+        <input type="text" id="iEstado" onblur="verificarCidade()">
         <br>
 
-        <label for=""></label>
-        <input type="text" id="">
+        <label for="">E-mail</label>
+        <input type="text" id="iemail" onblue="verificarEmail()">
         <br>
 
     </form>
 
-<script>
+    <script>
 
-    function verificarCPF(){
-        let cpf = document.getElementById('icpf').value.trim();
-        let cont = 0;
-        for (let i = 0; i<cpf.length;i++){
-            let aux = cpf.charAt(i);            
-            switch (aux) {
-                case "1": case "2": case "3": case "4": case "5": 
-                case "6": case "7": case "8": case "9": case "0":
-                    cont++;
+        function verificarCPF() {
+            let cpf = document.getElementById('icpf').value.trim();
+            let cont = 0;
+            for (let i = 0; i < cpf.length; i++) {
+                let aux = cpf.charAt(i);
+                switch (aux) {
+                    case "1": case "2": case "3": case "4": case "5":
+                    case "6": case "7": case "8": case "9": case "0":
+                        cont++;
+                }
+            } //fim do for
+
+            if (cont == 11) {
+                //verificando se são todos números
+                document.getElementById("ierrocpf").innerHTML = "xxx";
+
+                // verificar se tem 11 dígitos
+                if (cpf.length == 11) {
+                    let aux = cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-" + cpf.substring(9);
+                    document.getElementById('icpf').value = aux;
+                } else {
+                    if (cpf.length == 14) {
+                        cpf = cpf.replace(".", "");
+                        cpf = cpf.replace(".", "");
+                        cpf = cpf.replace("-", "");
+                        let aux = cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-" + cpf.substring(9);
+                        document.getElementById('icpf').value = aux;
+
+                    } else {
+                        document.getElementById("ierrocpf").innerHTML = "Não possui 11 dígitos.";
+
+                    }
+                }
+            } else {
+                // há caracter inválido - minuto 22:59 da aula
+                document.getElementById("ierrocpf").innerHTML = "Você não digitou números.";
             }
-        } //fim do for
-        
-        if (cpf.length == cont){
-            //verificando se são todos números
-            document.getElementById("ierrocpf").innerHTML = "xxx";
+        }
 
-            // verificar se tem 11 dígitos
-            if (cpf.length==11){
-                let aux = cpf.
+        function verificarEmail() {
 
-            }else {
-                document.getElementById("ierrocpf").innerHTML = "Não possui 11 dígitos.";
-            
+            var email = document.getElementById('iemail').value;
 
-        } else{
-            // há caracter inválido - minuto 22:59 da aula
-            document.getElementById("ierrocpf").innerHTML = "Você não digitou números.";
-        }        
-    }
-}
 
-// parei mais ou menos no minuto 29, não consegui descobrir aonde errei nas chaves do if else que ele quer que faça.
+            if
+                (email.includes("@hotmail.com") ||
+                email.includes("@gmail.com") ||
+                email.includes(".com.br") ||
+                email.includes(".com")) {
+                document.getElementById('iemail').value = email;
+            } else {
+                document.getElementById('iemail').value = "Você digitou errado";
+            }
 
-</script>
+            if
+                (email.includes(",") ||
+                email.includes("#") ||
+                email.includes("!") ||
+                email.includes(")") ||
+                email.includes("&")) {
+                document.getElementById('iemail').value = "Erro - Caracter Inválido";
+
+            }
+        }
+
+        function verificarTelefone() {
+            var telefone = document.getElementById('itelefone').value;
+
+            telefone = telefone.trim();
+
+            cpf = Number(cpf);
+
+            if (isNaN(cpf)) {
+                telefone = "Apenas Números"
+
+            } else {
+                cpf = cpf.toString();
+
+                if (cpf.length != 9) {
+                    telefone = "Digitem 9 dígitos: "
+                }
+            }
+
+            document.getElementById('itelefone').value = telefone;
+
+        }
+
+        function verificarCidade() {
+            estado = document.getElementById('iEstado').value
+
+            if (estado.includes("RJ")
+                || estado.includes("SP")
+                || estado.includes("ES")
+                || estado.includes("PE")
+                || estado.includes("AM")
+                || estado.includes("MG")
+            ) {
+                document.getElementById('inome').value = nome;
+
+            } else {
+                document.getElementById('iEstado').value = "Erro - Não digitou uma sigla de Estado Válida.";
+            }
+
+        }
+
+        function verificarNome() {
+            let nome = document.getElementById('inome').value;
+
+            nome = nome.trim();
+
+            while (nome.includes("  ")) {
+                nome = nome.replace("  ", " ")
+            }
+
+            nome = nome.toUpperCase();
+
+            if (nome.includes("1")
+                || nome.includes("2")
+                || nome.includes("3")
+                || nome.includes("4")
+                || nome.includes("5")
+                || nome.includes("6")
+                || nome.includes("7")
+                || nome.includes("9")
+                || nome.includes("0")
+                || nome.includes("~")
+                || nome.includes("^")
+                || nome.includes("$")
+                || nome.includes("#")
+                || nome.includes("!")
+                || nome.includes("@")
+                || nome.includes("`")
+            ) {
+                document.getElementById('inome').value = "Erro - Caracter Não Autorizado";
+            } else {
+                document.getElementById('inome').value = nome;
+            }
+
+
+            var indice = Number(nome.indexOf(" "));
+            var total = nome.length - indice
+
+            if (indice <= 2) {
+                document.getElementById('inome').value = "Erro - Primeiro Nome menor que 3";
+            }
+
+            var secPalavra = nome.length - indice - 1;
+
+            if (secPalavra <= 2) {
+                document.getElementById('inome').value = "Erro - Segundo Nome Menor que 3";
+            }
+
+        }
+
+    </script>
 
 </body>
+
 </html>
