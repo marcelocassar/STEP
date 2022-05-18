@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Café</title>
+    <link rel="shortcut icon" href="./src/images/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Cafeteria especializada em cafés Gourmet de alta qualidade.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;1,300&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/reset.css"> 
+    
+    <style>
+
+        .cadastro div{
+            
+            padding: 5px;
+
+        }
+
+        .cadastro label {
+            color: red;
+            border: 1px black solid;
+            display: inline;
+            height: 35px;
+            padding: 7px;
+        }
+
+        .cadastro input{
+            color: red;
+            border: 1px black solid;
+            display: inline;
+            width: 250px;
+            height: 35px;
+        }
+
+    </style>
+    
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="index.html" class="logo">
+            <h1>Code Café</h1>
+        </a>
+
+        <nav>
+
+            <ul>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#onde-estamos">Onde Estamos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="painel">
+            <h2>Aqui o café é só o começo.</h2>
+
+        </section>
+
+        <section class="secao-com-texto" id="quem-somos">
+            <header>
+                <img src="./src/images/logo-secoes.png" alt="logo">
+                <h2>Quem Somos</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quibusdam facere ad, ipsa minus dolore
+                    illum, cumque sunt ea saepe nobis amet consequatur, ducimus voluptate eligendi iusto soluta sint
+                    totam.</p>
+            </header>
+        </section>
+
+        <section class="ladrilho">
+            <div class="grande"></div>
+            <div class="pequeno grao"></div>
+            <div class="pequeno"></div>
+            <div class="medio"></div>
+        </section>
+
+        <section class="secao-com-texto onde-estamos" id="onde-estamos">
+
+            <header>
+                <img src="./src/images/logo-secoes.png" alt="logo">
+                <h2>Formulário de Cadastro <br> Novos Clientes</h2>
+
+
+                <div class="cadastro">                    
+                    <label for="inome">Nome: </label>
+                    <input type="text" id="inome" onblur="verificarNomes()">                    
+                </div>
+
+                                               
+            </header>
+
+        </section>
+
+        <section class="contato" id="contato">
+            <div class="texto">
+                <h2>Contato</h2>
+                <address>
+                    Telefone: (21) 9 9001-9991<br>
+                    E-mail: marcelocassar@gmail.com<br><br>
+                    Horário de Atendimento: Seg a Sex - 9h às 18h.
+                </address>
+            </div>
+        </section>
+
+    </main>
+    <footer class="rodape">
+
+        <a href="index.html" class="logo">
+            <img src="./src/images/logo.jpg" alt="">
+        </a>
+        <ul>
+            <li><a href="#quem-somos">Quem Somos</a></li>
+            <li><a href="#onde-estamos">Onde Estamos</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <div class="conteudo-de-baixo">
+            <div class="redes-sociais">
+                <a href="#" target="_blank" class="facebook">
+                    <img src="./src/images/face.png" alt="facebook" class="facebook" title="Logo facebook">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="./src/images/insta.png" alt="instagram" class="instagram" title="Logo Instagram">
+                </a>
+            </div>
+            <div class="copyright">2022 CopyRight Café</div>
+        </div>
+
+    </footer>
+
+    <script>
+
+        function verificarNomes(){
+
+            var nome = document.getElementById("inome").value;            
+            nome = nome.trim();
+            var cont = 0;
+            var aux = 0;
+            for(var i = 0; i <= nome.lenght; i++){
+                var aux = nome.charAt(i);
+                switch (aux) {
+                    case "0": case "1": case "2": case "3": case "4": 
+                    case "5": case "6": case "7": case "8": case "9":                         
+                       cont++; break;
+                
+                }
+            }
+
+            if (cont != 0){
+                document.getElementById("inome").value = "Você não digitou letras."
+            }
+
+        }
+
+        function verificarNome() {
+
+var nome = document.getElementById("inome").value;
+nome = nome.trim();
+
+if (nome == "" || nome == null) {
+    document.getElementById("erroinome").innerHTML = "Nome Inválido.";
+    document.getElementById("erroinome").style.color = "red";
+    document.getElementById("inome").style.borderColor = "red";
+} else {
+    if (!nome.includes(" ")) {
+        document.getElementById("erroinome").innerHTML = "Nome Inválido.";
+        document.getElementById("erroinome").style.color = "red";
+        document.getElementById("inome").style.borderColor = "red";
+
+    } else {
+
+        var cont = 0;[]
+        for (var i = 0; i < nome.length; i++) {
+
+            var aux = nome.charAt(i);
+            switch (aux) {
+                case "0": case "@": case "'": case "!": case "#":
+                case "1": case "$": case "%": case "¨": case "&":
+                case "2": case "*": case "(": case ")": case "_":
+                case "3": case "-": case "+": case "=": case "{":
+                case "4": case "}": case "[": case "]": case "|":
+                case "5": case "|": case "<": case ",": case ">":
+                case "6": case ".": case ";": case ":": case "/":
+                case "7": case "?":
+                case "8":
+                case "9":
+                    cont++; break;
+            }
+        }
+        if (cont != 0) {
+            document.getElementById("erroinome").innerHTML = "Nome contem caracter inválido.";
+            document.getElementById("erroinome").style.color = "red";
+            document.getElementById("inome").style.borderColor = "red";
+
+
+        } else {
+
+            if (nome.length < 7 || nome.indexOf(" ") < 3 || nome.length - nome.lastIndexOf(" ") <= 3) {
+                document.getElementById("erroinome").innerHTML = "Nome com numéro baixo de caracteres.";
+                document.getElementById("erroinome").style.color = "red";
+                document.getElementById("inome").style.borderColor = "red";
+
+            } else {
+
+                document.getElementById("inome").style.borderColor = "blue";
+                document.getElementById("erroinome").style.color = "blue";
+
+                document.getElementById("erroinome").innerHTML = "Nome Válido.";
+            }
+        }
+    }
+}
+document.getElementById("inome").value = nome;
+}
+
+
+    </script>
+
+</body>
+
+</html>
