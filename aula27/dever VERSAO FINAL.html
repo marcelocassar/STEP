@@ -161,13 +161,20 @@
             } else {
                 cpf = cpf.toString();
 
-                if (cpf.length != 9) {
-                    telefone = "Digitem 9 dígitos: "
+                if (cpf.length != 1) {
+                    telefone = "Digitem 11 dígitos: Exemplo: 21 9 9001 5991 "
                 }
             }
 
-            document.getElementById('itelefone').value = telefone;
+           
 
+            let aux = telefone.substring(0, 2) + " " + telefone.substring(2, 3) + " " + telefone.substring(3, 7) + "-" + telefone.substring(8);
+            
+
+
+            document.getElementById('itelefone').value = aux;
+
+            
         }
 
         function verificarCidade() {

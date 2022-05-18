@@ -15,34 +15,45 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="./src/css/style.css">
-    <link rel="stylesheet" href="./src/css/reset.css"> 
-    
+    <link rel="stylesheet" href="./src/css/reset.css">
+
     <style>
+        .cadastro div {
 
-        .cadastro div{
-            
             padding: 5px;
+            display: inline;
 
+        }
+
+        .cadastro  p {
+            position: absolute;
+            text-align: left;
+            vertical-align: center ;
+            display: inline;
+            font-size: 15px;
+            padding-top: 10px;
+            margin-left: 10px;
         }
 
         .cadastro label {
-            color: red;
-            border: 1px black solid;
-            display: inline;
-            height: 35px;
-            padding: 7px;
+            color: blue;
+            min-width: 132px;
+            max-width: 142px;
+            margin-right: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
-        .cadastro input{
-            color: red;
+        .cadastro input {
+            color: blue;
             border: 1px black solid;
             display: inline;
-            width: 250px;
+            width: 150px;
             height: 35px;
         }
-
     </style>
-    
+
 
 </head>
 
@@ -81,26 +92,176 @@
             </header>
         </section>
 
-        <section class="ladrilho">
-            <div class="grande"></div>
-            <div class="pequeno grao"></div>
-            <div class="pequeno"></div>
-            <div class="medio"></div>
-        </section>
+        <div class="carrossel">
+
+            <div class="peq"><img src="src/images/1.jpg" alt="" id="0"></div>
+            <div class="grande"><img src="src/images/2.jpg" alt="" id="1"></div>
+            <div class="peq"><img src="src/images/3.jpg" alt="" id="2"></div>
+            
+            </div>
+            
+            <div class="botoes">
+            
+                <div class="botao"><button onclick="anterior()">Anterior</button></div>
+                <div class="botao"><button onclick="posterior()">Posterior</button></div>
+            
+            </div>
+            <div class="indices">
+            
+                <div><p>Anterior</p>
+                    <input type="text" name="" id="um"></div>
+                <div><p>Meio</p>
+                    <input type="text" name="" id="dois"></div>
+                <div><p>Posterior</p>
+                    <input type="text" name="" id="tres"></div>
+              
+            </div>
 
         <section class="secao-com-texto onde-estamos" id="onde-estamos">
 
             <header>
                 <img src="./src/images/logo-secoes.png" alt="logo">
                 <h2>Formulário de Cadastro <br> Novos Clientes</h2>
-
-
-                <div class="cadastro">                    
+            </header>
+            <form action="">
+                <div class="cadastro">
                     <label for="inome">Nome: </label>
-                    <input type="text" id="inome" onblur="verificarNomes()">                    
+                    <input type="text" id="inome" onblur="verificarNome('inome')">
+                    <p id="erroinome"></p>
+                </div>
+                <div class="cadastro">
+                    <label for="inacionalidade">Nacionalidade: </label>
+                    <input type="text" id="inacionalidade" onblur="verificarNome('inacionalidade')">
+                    <p id="erroinacionalidade"></p>
+
                 </div>
 
-                                               
+                <div class="cadastro">
+                    <label for="iestado">Estado: </label>
+                    <input type="text" id="iestado" onblur="verificarNome('iestado')">
+                    <p id="erroiestado"></p>
+                </div>
+
+                <div class="cadastro">
+                    <label for="imunicipio">Município: </label>
+                    <input type="text" id="imunicipio" onblur="verificarNome('imunicipio')">
+                    <p id="erroimunicipio"></p>
+                </div>
+
+                <div class="cadastro">
+                    <label for="ipais">País: </label>
+                    <input type="text" id="ipais" onblur="verificarNome('ipais')">
+                    <p id="erroipais"></p>
+                </div>
+
+                <div class="cadastro">
+                    <label for="ipai">Nome do Pai: </label>
+                    <input type="text" id="ipai" onblur="verificarNome('ipai')">
+                    <p id="erroipai"></p>
+                </div>
+
+                <div class="cadastro">
+                    <label for="imae">Nome da Mãe: </label>
+                    <input type="text" id="imae" onblur="verificarNome('imae')">
+                    <p id="erroimae"></p>
+                </div>
+
+                <div class="cadastro">
+                    <label for="iidade">Idade</label>
+                    <input type=number id="iidade" placeholder="Coloque sua idade">
+                    <p id="erroiidade"></p>
+                </div>
+
+                <div class="cadastro">
+                    <label for="iano">Ano Nascimento</label>
+                    <input type=number id="iano" placeholder="Coloque o ano que nasceu:">
+                    <p id="erroiano"></p>
+                </div>
+                <br>
+                <div class="cadastro">
+                    <label for="">Mês de Nascimento</label>
+                    <select name="select">
+                        <option value="valor1" selected>Selecionar Mês</option>
+                        <option value="valor2">JAN</option>
+                        <option value="valor3">FEV</option>
+                        <option value="valor4">MAR</option>
+                        <option value="valor5">ABR</option>
+                        <option value="valor6">MAI</option>
+                        <option value="valor7">JUN</option>
+                        <option value="valor8">JUL</option>
+                        <option value="valor9">AGO</option>
+                        <option value="valor10">SET</option>
+                        <option value="valor11">OUT</option>
+                        <option value="valor12">NOV</option>
+                        <option value="valor13">DEZ</option>
+                    </select>
+                </div>
+                <br>
+                <div class="cadastro">
+                    <label for="">Sexo:</label>
+                    <select name="sexosel">
+                        <option value="valor1" selected>Selecionar SEXO: </option>
+                        <option value="valor2">M</option>
+                        <option value="valor3">F</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div class="cadastro">
+                    <label for="">Cor da Pele</label>
+                    <select name="select2">
+                        <option value="valor1" selected>Cor da Pele:</option>
+                        <option value="valor2">Negra</option>
+                        <option value="valor3">Morena</option>
+                        <option value="valor4">Pardo</option>
+                        <option value="valor5">Não informar</option>
+
+                    </select>
+                </div>
+
+                <br>
+
+                <div class="cadastro">
+                    <label for="">Estado Civil: </label>
+                    <select name="select3">
+                        <option value="valor1" selected>Escolha:</option>
+                        <option value="valor2">Casada(o)</option>
+                        <option value="valor3">Solteir(a)</option>
+                        <option value="valor4">Viúva(o)</option>
+                        <option value="valor5">Não informar</option>
+
+                    </select>
+                </div>
+
+                <br>
+
+                <div class="cadastro">
+                    <label for="">Data Nascimento:</label>
+                    <input type="date" name="" id="idatanascimento">
+                </div>
+
+                <div class="cadastro">
+                    <label for="iemail">E-mail:</label>
+                    <input type="text" name="" id="iemail" onblur="verificarEmail()">
+                </div>
+
+                <div class="cadastro">
+                    <label for="itelefone">Telefone:</label>
+                    <input type="text" name="" id="itelefone" onblur="verificarTelefone()">
+                </div>
+
+                <div class="cadastro">
+                    <label for="icpf">CPF:</label>
+                    <input type="text" name="" id="icpf" onblur="verificarCPF()">
+                    <p id="ierrocpf"></p>
+                </div>
+
+            </form>
+
+
+
+
             </header>
 
         </section>
@@ -144,91 +305,257 @@
 
     <script>
 
-        function verificarNomes(){
+        function verificarEmail() {
 
-            var nome = document.getElementById("inome").value;            
-            nome = nome.trim();
-            var cont = 0;
-            var aux = 0;
-            for(var i = 0; i <= nome.lenght; i++){
-                var aux = nome.charAt(i);
+            var email = document.getElementById('iemail').value;
+
+
+            if
+                (email.includes("@hotmail.com") ||
+                email.includes("@gmail.com") ||
+                email.includes(".com.br") ||
+                email.includes(".com")) {
+                document.getElementById('iemail').value = email;
+            } else {
+                document.getElementById('iemail').value = "Você digitou errado";
+            }
+
+            if
+                (email.includes(",") ||
+                email.includes("#") ||
+                email.includes("!") ||
+                email.includes(")") ||
+                email.includes("&")) {
+                document.getElementById('iemail').value = "Erro - Caracter Inválido";
+
+            }
+        }
+
+        function verificarCPF() {
+            let cpf = document.getElementById('icpf').value.trim();
+            let cont = 0;
+            for (let i = 0; i < cpf.length; i++) {
+                let aux = cpf.charAt(i);
                 switch (aux) {
-                    case "0": case "1": case "2": case "3": case "4": 
-                    case "5": case "6": case "7": case "8": case "9":                         
-                       cont++; break;
-                
+                    case "1": case "2": case "3": case "4": case "5":
+                    case "6": case "7": case "8": case "9": case "0":
+                        cont++;
+                }
+            } //fim do for
+
+            if (cont == 11) {
+                //verificando se são todos números
+                document.getElementById("ierrocpf").innerHTML = "ok";
+
+                // verificar se tem 11 dígitos
+                if (cpf.length == 11) {
+                    let aux = cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-" + cpf.substring(9);
+                    document.getElementById('icpf').value = aux;
+                } else {
+                    if (cpf.length == 14) {
+                        cpf = cpf.replace(".", "");
+                        cpf = cpf.replace(".", "");
+                        cpf = cpf.replace("-", "");
+                        let aux = cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-" + cpf.substring(9);
+                        document.getElementById('icpf').value = aux;
+
+                    } else {
+                        document.getElementById("ierrocpf").innerHTML = "Não possui 11 dígitos.";
+
+                    }
+                }
+            } else {
+                // há caracter inválido - minuto 22:59 da aula
+                document.getElementById("ierrocpf").innerHTML = "Você não digitou números.";
+            }
+        }
+
+        function verificarTelefone() {
+            var telefone = document.getElementById('itelefone').value;
+
+            telefone = telefone.trim();
+
+            telefone = Number(telefone);
+
+            if (isNaN(telefone)) {
+                telefone = "Apenas Números"
+            }
+
+            telefone = telefone.toString();
+
+            if (telefone.length != 11 && telefone != "Apenas Números") {
+                telefone = "Digitem 11 dígitos: Exemplo: 21 9 9001 5991 "
+            }
+
+            if (telefone.length == 11) {
+
+                telefone = "(" + telefone.substring(0, 2) + ") " + telefone.substring(2, 3) + " " + telefone.substring(3, 7) + "-" + telefone.substring(8);
+
+            }
+
+            document.getElementById('itelefone').value = telefone;
+
+        }
+
+        function verificarEmail(x) {
+            verificarNome(x);
+
+        }
+
+        function verificarNome(x) {
+
+            let nome = document.getElementById(x).value;
+            nome = nome.trim();
+
+            while (nome.includes("  ")) {
+                nome = nome.replace("  ", " ")
+            }
+
+            if (nome == "" || nome == null) {
+                document.getElementById("erro" + x).innerHTML = "Nome Inválido.";
+                document.getElementById("erro" + x).style.color = "red";
+                document.getElementById(x).style.borderColor = "red";
+            } else {
+                if (!nome.includes(" ")) {
+                    document.getElementById("erro" + x).innerHTML = "Nome Inválido.";
+                    document.getElementById("erro" + x).style.color = "red";
+                    document.getElementById(x).style.borderColor = "red";
+
+                } else {
+
+                    let cont = 0;
+                    for (let i = 0; i < nome.length; i++) {
+
+                        let aux = nome.charAt(i);
+                        switch (aux) {
+                            case "0": case "@": case "'": case "!": case "#":
+                            case "1": case "$": case "%": case "¨": case "&":
+                            case "2": case "*": case "(": case ")": case "_":
+                            case "3": case "-": case "+": case "=": case "{":
+                            case "4": case "}": case "[": case "]": case "|":
+                            case "5": case "|": case "<": case ",": case ">":
+                            case "6": case ".": case ";": case ":": case "/":
+                            case "7": case "?":
+                            case "8":
+                            case "9":
+                                cont++; break;
+                        }
+                    }
+                    if (cont != 0) {
+                        document.getElementById("erro" + x).innerHTML = "Nome contem caracter inválido.";
+                        document.getElementById("erro" + x).style.color = "red";
+                        document.getElementById(x).style.borderColor = "red";
+
+
+                    } else {
+
+                        if (nome.length < 7 || nome.indexOf(" ") < 3 || nome.length - nome.lastIndexOf(" ") <= 3) {
+                            document.getElementById("erro" + x).innerHTML = "Nome com numéro baixo de caracteres.";
+                            document.getElementById("erro" + x).style.color = "red";
+                            document.getElementById("erro" + x).style.borderColor = "red";
+
+                        } else {
+
+                            document.getElementById(x).style.borderColor = "blue";
+                            document.getElementById(x).style.color = "blue";
+
+                            document.getElementById("erro" + x).innerHTML = "Nome Válido.";
+                        }
+                    }
                 }
             }
-
-            if (cont != 0){
-                document.getElementById("inome").value = "Você não digitou letras."
-            }
-
+            document.getElementById(x).value = nome;
         }
-
-        function verificarNome() {
-
-var nome = document.getElementById("inome").value;
-nome = nome.trim();
-
-if (nome == "" || nome == null) {
-    document.getElementById("erroinome").innerHTML = "Nome Inválido.";
-    document.getElementById("erroinome").style.color = "red";
-    document.getElementById("inome").style.borderColor = "red";
-} else {
-    if (!nome.includes(" ")) {
-        document.getElementById("erroinome").innerHTML = "Nome Inválido.";
-        document.getElementById("erroinome").style.color = "red";
-        document.getElementById("inome").style.borderColor = "red";
-
-    } else {
-
-        var cont = 0;[]
-        for (var i = 0; i < nome.length; i++) {
-
-            var aux = nome.charAt(i);
-            switch (aux) {
-                case "0": case "@": case "'": case "!": case "#":
-                case "1": case "$": case "%": case "¨": case "&":
-                case "2": case "*": case "(": case ")": case "_":
-                case "3": case "-": case "+": case "=": case "{":
-                case "4": case "}": case "[": case "]": case "|":
-                case "5": case "|": case "<": case ",": case ">":
-                case "6": case ".": case ";": case ":": case "/":
-                case "7": case "?":
-                case "8":
-                case "9":
-                    cont++; break;
-            }
-        }
-        if (cont != 0) {
-            document.getElementById("erroinome").innerHTML = "Nome contem caracter inválido.";
-            document.getElementById("erroinome").style.color = "red";
-            document.getElementById("inome").style.borderColor = "red";
-
-
-        } else {
-
-            if (nome.length < 7 || nome.indexOf(" ") < 3 || nome.length - nome.lastIndexOf(" ") <= 3) {
-                document.getElementById("erroinome").innerHTML = "Nome com numéro baixo de caracteres.";
-                document.getElementById("erroinome").style.color = "red";
-                document.getElementById("inome").style.borderColor = "red";
-
-            } else {
-
-                document.getElementById("inome").style.borderColor = "blue";
-                document.getElementById("erroinome").style.color = "blue";
-
-                document.getElementById("erroinome").innerHTML = "Nome Válido.";
-            }
-        }
-    }
-}
-document.getElementById("inome").value = nome;
-}
-
 
     </script>
+
+<script>
+
+    var indice = 1
+    var depois = indice +1
+    var listaImg = [];
+
+    listaImg.push("./imagens/0.png");
+    listaImg.push("./imagens/1.png");
+    listaImg.push("./imagens/2.png");
+    listaImg.push("./imagens/3.png");
+    listaImg.push("./imagens/4.png");
+    listaImg.push("./imagens/5.png");
+    listaImg.push("./imagens/6.png");
+    listaImg.push("./imagens/7.png");
+    listaImg.push("./imagens/8.png");
+    listaImg.push("./imagens/9.png");
+
+    function carregar(){
+        document.getElementById("um").value = indice -1;
+        document.getElementById("dois").value = indice;
+        document.getElementById("tres").value = indice +1;
+
+        document.getElementById('0').src = listaImg[0]
+        document.getElementById('1').src = listaImg[1]
+        document.getElementById('2').src = listaImg[2]
+    }
+
+    function posterior(){
+        indice = indice + 1;
+        let antes, depois
+                
+        if (indice >= listaImg.length){
+            indice = 0
+        }
+
+        depois = indice + 1;
+
+        if (depois >= listaImg.length){
+            depois = 0
+        }
+       
+        antes = indice -1;
+
+        if (antes == -1){
+            antes = listaImg.length -1
+        }
+
+        document.getElementById("um").value = antes;
+        document.getElementById("dois").value = indice;
+        document.getElementById("tres").value = depois;
+
+        document.getElementById('0').src = listaImg[antes]
+        document.getElementById('1').src = listaImg[indice]
+        document.getElementById('2').src = listaImg[depois]
+
+    }
+
+    function anterior(){
+        indice = indice - 1;        
+        let antes, depois
+        antes = indice -1;
+        depois = indice +1;
+
+        if (indice == -1) {
+            indice = listaImg.length -1
+        } 
+
+        if (antes == -1){
+            antes = listaImg.length -1
+        }
+
+        if (antes == -2){
+            antes = 8;
+        }
+
+
+        document.getElementById("um").value = antes;
+        document.getElementById("dois").value = indice;
+        document.getElementById("tres").value = depois;
+
+        document.getElementById('0').src = listaImg[antes]
+        document.getElementById('1').src = listaImg[indice]
+        document.getElementById('2').src = listaImg[depois]
+    }
+
+
+</script>
 
 </body>
 

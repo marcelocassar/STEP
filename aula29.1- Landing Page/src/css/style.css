@@ -73,13 +73,13 @@ body {
     margin-bottom: 37px;
 }
 
-.secao-com-texto p{
+.secao-com-texto > p{
     font-size: 18px;
     width: 100%;
     margin: 0 auto;
 }
 
-.secao-com-texto.onde-estamos p{
+.secao-com-texto.onde-estamos > p{
     font-size: 28px;
     width: 480px;
 }
