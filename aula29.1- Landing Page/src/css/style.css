@@ -73,43 +73,15 @@ body {
     margin-bottom: 37px;
 }
 
-.secao-com-texto > p{
+.secao-com-texto > p {
     font-size: 18px;
     width: 100%;
     margin: 0 auto;
 }
 
-.secao-com-texto.onde-estamos > p{
+.secao-com-texto.onde-estamos > p {
     font-size: 28px;
     width: 480px;
-}
-
-.ladrilho div{
-    float:left;
-}
-
-.ladrilho .grande {
-    background: url(../images/4.jpg) center center no-repeat;
-    height: 600px;   
-    width: 50%;
-}
-
-.ladrilho .pequeno {
-    background: url(../images/3.jpg) center center no-repeat;
-    height: 300px;
-    width: 25%;
-}
-
-.ladrilho .pequeno.grao {
-    background: url(../images/2.jpg) center center no-repeat;
-    height: 300px;
-    width: 25%;
-}
-
-.ladrilho .medio {
-    background: url(../images/1.jpg) center center no-repeat;
-    height: 300px;
-    width: 50%;
 }
 
 .contato {

@@ -16,16 +16,16 @@
 
     <link rel="stylesheet" href="./src/css/style.css">
     <link rel="stylesheet" href="./src/css/reset.css">
-
+    <script src="carrossel.js"></script>
     <style>
-        .cadastro div {
+        .cadastro > div {
 
             padding: 5px;
             display: inline;
 
         }
 
-        .cadastro  p {
+        .cadastro > p {
             position: absolute;
             text-align: left;
             vertical-align: center ;
@@ -52,6 +52,70 @@
             width: 150px;
             height: 35px;
         }
+
+        .peq, .grande {
+            display: inline;
+        }
+
+        .carrossel {
+
+            text-align: center;
+            margin: 0 auto;
+        }
+
+          
+
+        .peq img{
+            
+            width: 100px;
+            height: 100px;            
+            border-radius: 15% 15% 15% 15%;
+            box-shadow: 3px 2px 5px 3px rgba(10, 1, 1, 0.238);
+
+            
+        }
+
+        .grande img{
+            
+            width: 350px;
+            height: 300px;
+            margin-left: 20px;
+            margin-right: 20px;
+            
+        }
+
+        .botoes {
+            text-align: center;            
+        }
+
+        .botoes div {
+            display: inline;
+        }
+
+        .botoes button {
+            margin: 20px;
+            width: 200px;
+            height: 75px;
+            border-radius: 20%;
+            box-shadow: 2px 3px 2px 2px;
+        }
+        
+        .botoes button:hover {
+            color: white;
+            background-color: black ;
+        }
+
+        .botoes button:focus {
+            color: rgba(128, 38, 38, 0.532);
+            background-color: black ;
+        }
+
+        .indices {
+            display: none;
+            text-align: center;
+        }
+
+
     </style>
 
 
@@ -94,9 +158,9 @@
 
         <div class="carrossel">
 
-            <div class="peq"><img src="src/images/1.jpg" alt="" id="0"></div>
-            <div class="grande"><img src="src/images/2.jpg" alt="" id="1"></div>
-            <div class="peq"><img src="src/images/3.jpg" alt="" id="2"></div>
+            <div class="peq"><img src="src/images/0.png" alt="" id="0"></div>
+            <div class="grande"><img src="src/images/1.png" alt="" id="1"></div>
+            <div class="peq"><img src="src/images/2.png" alt="" id="2"></div>
             
             </div>
             
@@ -468,94 +532,6 @@
         }
 
     </script>
-
-<script>
-
-    var indice = 1
-    var depois = indice +1
-    var listaImg = [];
-
-    listaImg.push("./imagens/0.png");
-    listaImg.push("./imagens/1.png");
-    listaImg.push("./imagens/2.png");
-    listaImg.push("./imagens/3.png");
-    listaImg.push("./imagens/4.png");
-    listaImg.push("./imagens/5.png");
-    listaImg.push("./imagens/6.png");
-    listaImg.push("./imagens/7.png");
-    listaImg.push("./imagens/8.png");
-    listaImg.push("./imagens/9.png");
-
-    function carregar(){
-        document.getElementById("um").value = indice -1;
-        document.getElementById("dois").value = indice;
-        document.getElementById("tres").value = indice +1;
-
-        document.getElementById('0').src = listaImg[0]
-        document.getElementById('1').src = listaImg[1]
-        document.getElementById('2').src = listaImg[2]
-    }
-
-    function posterior(){
-        indice = indice + 1;
-        let antes, depois
-                
-        if (indice >= listaImg.length){
-            indice = 0
-        }
-
-        depois = indice + 1;
-
-        if (depois >= listaImg.length){
-            depois = 0
-        }
-       
-        antes = indice -1;
-
-        if (antes == -1){
-            antes = listaImg.length -1
-        }
-
-        document.getElementById("um").value = antes;
-        document.getElementById("dois").value = indice;
-        document.getElementById("tres").value = depois;
-
-        document.getElementById('0').src = listaImg[antes]
-        document.getElementById('1').src = listaImg[indice]
-        document.getElementById('2').src = listaImg[depois]
-
-    }
-
-    function anterior(){
-        indice = indice - 1;        
-        let antes, depois
-        antes = indice -1;
-        depois = indice +1;
-
-        if (indice == -1) {
-            indice = listaImg.length -1
-        } 
-
-        if (antes == -1){
-            antes = listaImg.length -1
-        }
-
-        if (antes == -2){
-            antes = 8;
-        }
-
-
-        document.getElementById("um").value = antes;
-        document.getElementById("dois").value = indice;
-        document.getElementById("tres").value = depois;
-
-        document.getElementById('0').src = listaImg[antes]
-        document.getElementById('1').src = listaImg[indice]
-        document.getElementById('2').src = listaImg[depois]
-    }
-
-
-</script>
 
 </body>
 
