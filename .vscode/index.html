@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js.js"></script>
+</head>
+
+<body>
+
+    <script>
+
+        function howMuchWater(water, load, clothes) {
+
+            let total
+            let max = load * 2
+            if (clothes <= load) {
+                total = clothes * water
+            } else {
+                if (clothes > load) {
+                    clothes = clothes - load
+                    total = (clothes * water) / 10
+                }
+            }
+
+            if (clothes >= max) {
+                total = "Too much clothes"
+            }
+
+            if (clothes < load) {
+                total = 'Not enough clothes'
+            }
+            return total
+        }
+
+        function digital_root(n) {
+            if (n.lenght > 2) {
+
+                let cont = 0
+
+                for (let i = 0; i <= n.length; i++) {
+                    let aux = n.charAt(i)
+                    cont = aux + cont
+                }
+
+                n = cont
+            }
+
+            if (n.lenght <= 2) {
+
+                let cont = 0;
+                for (let i = 0; i <= n.length; i++) {
+                    let aux = n.charAt(i)
+                    cont = aux + cont;
+                }
+
+                n = cont;
+                return n;
+            }
+        }
+
+
+        function digital_root(n) {
+
+            n = n.toString()
+
+            let cont = 0;
+            for (let i = 0; i <= n.length; i++) {
+                let aux = Number(n.charAt(i));
+                cont = aux + cont;
+            }
+
+            n = cont;
+            return n;
+
+        }
+
+        function howMuchWater(aguanec, roupaideal, roupacolocada) {
+
+            let totalagua, maxroupas
+            
+            maxroupas = 2 * roupaideal;
+
+            totalagua = aguanec * (1.1 * (roupacolocada - roupaideal))
+
+            if (roupacolocada >= maxroupas) {
+                totalagua = "Too much clothes"
+            }
+
+            if (roupacolocada < roupaideal){
+                totalagua = "Not enough clothes"
+            }
+
+            return totalagua
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
