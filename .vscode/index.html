@@ -81,7 +81,7 @@
         function howMuchWater(aguanec, roupaideal, roupacolocada) {
 
             let totalagua, maxroupas
-            
+
             maxroupas = 2 * roupaideal;
 
             totalagua = aguanec * (1.1 * (roupacolocada - roupaideal))
@@ -90,13 +90,32 @@
                 totalagua = "Too much clothes"
             }
 
-            if (roupacolocada < roupaideal){
+            if (roupacolocada < roupaideal) {
                 totalagua = "Not enough clothes"
             }
 
             return totalagua
         }
 
+
+        function howMuchWater(aguanec, roupaideal, roupacolocada) {
+
+            let totalagua, maxroupas
+
+            maxroupas = 2 * roupaideal;
+
+            totalagua = aguanec * (1.1 * (roupacolocada - roupaideal))
+
+            if (roupacolocada >= maxroupas) {
+                totalagua = "Too much clothes"
+            }
+
+            if (roupacolocada < roupaideal) {
+                totalagua = "Not enough clothes"
+            }
+
+            return totalagua
+        }
 
 
 
