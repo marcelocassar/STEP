@@ -18,17 +18,17 @@
     <link rel="stylesheet" href="./src/css/reset.css">
     <script src="carrossel.js"></script>
     <style>
-        .cadastro > div {
+        .cadastro>div {
 
             padding: 5px;
             display: inline;
 
         }
 
-        .cadastro > p {
+        .cadastro>p {
             position: absolute;
             text-align: left;
-            vertical-align: center ;
+            vertical-align: center;
             display: inline;
             font-size: 15px;
             padding-top: 10px;
@@ -36,24 +36,29 @@
         }
 
         .cadastro label {
-            color: blue;
+            color: rgb(63, 16, 16);
             min-width: 132px;
             max-width: 142px;
             margin-right: 20px;
             display: inline-block;
             margin-top: 10px;
             margin-bottom: 10px;
+            text-align: right;
         }
 
         .cadastro input {
             color: blue;
             border: 1px black solid;
+            border-radius: 20px;
             display: inline;
             width: 150px;
             height: 35px;
+            text-align: center;
+            width: 60%;
         }
 
-        .peq, .grande {
+        .peq,
+        .grande {
             display: inline;
         }
 
@@ -61,31 +66,36 @@
 
             text-align: center;
             margin: 0 auto;
+            border: 1px solid black;
+            width: 85%;
+            height: 430px;
+            padding: 30px;
+
         }
 
-          
 
-        .peq img{
-            
+
+        .peq img {
+
             width: 100px;
-            height: 100px;            
+            height: 100px;
             border-radius: 15% 15% 15% 15%;
             box-shadow: 3px 2px 5px 3px rgba(10, 1, 1, 0.238);
 
-            
+
         }
 
-        .grande img{
-            
+        .grande img {
+
             width: 350px;
             height: 300px;
             margin-left: 20px;
             margin-right: 20px;
-            
+
         }
 
         .botoes {
-            text-align: center;            
+            text-align: center;
         }
 
         .botoes div {
@@ -93,21 +103,17 @@
         }
 
         .botoes button {
-            margin: 20px;
+            margin: 50px;
             width: 200px;
             height: 75px;
             border-radius: 20%;
             box-shadow: 2px 3px 2px 2px;
-        }
-        
-        .botoes button:hover {
-            color: white;
-            background-color: black ;
+            ;
         }
 
-        .botoes button:focus {
-            color: rgba(128, 38, 38, 0.532);
-            background-color: black ;
+        .botoes button:hover {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.217);
         }
 
         .indices {
@@ -115,7 +121,26 @@
             text-align: center;
         }
 
+        #onde-estamos {
+            background-color: rgba(255, 235, 205, 0.384);
+            padding: 30px;
+        }
 
+        #enviar {
+            width: 200px;
+            height: 50px;
+            border-radius: 20px;
+            box-shadow: 1px 1px 2px 1px;
+            margin-top: 30px;
+        }
+
+        #enviar:hover {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.217);
+        } 
+
+      
+        
     </style>
 
 
@@ -161,25 +186,31 @@
             <div class="peq"><img src="src/images/0.png" alt="" id="0"></div>
             <div class="grande"><img src="src/images/1.png" alt="" id="1"></div>
             <div class="peq"><img src="src/images/2.png" alt="" id="2"></div>
-            
+
+        </div>
+
+        <div class="botoes">
+
+            <div class="botao"><button onclick="anterior()">Anterior</button></div>
+            <div class="botao"><button onclick="posterior()">Posterior</button></div>
+
+        </div>
+        <div class="indices">
+
+            <div>
+                <p>Anterior</p>
+                <input type="text" name="" id="um">
             </div>
-            
-            <div class="botoes">
-            
-                <div class="botao"><button onclick="anterior()">Anterior</button></div>
-                <div class="botao"><button onclick="posterior()">Posterior</button></div>
-            
+            <div>
+                <p>Meio</p>
+                <input type="text" name="" id="dois">
             </div>
-            <div class="indices">
-            
-                <div><p>Anterior</p>
-                    <input type="text" name="" id="um"></div>
-                <div><p>Meio</p>
-                    <input type="text" name="" id="dois"></div>
-                <div><p>Posterior</p>
-                    <input type="text" name="" id="tres"></div>
-              
+            <div>
+                <p>Posterior</p>
+                <input type="text" name="" id="tres">
             </div>
+
+        </div>
 
         <section class="secao-com-texto onde-estamos" id="onde-estamos">
 
@@ -321,6 +352,8 @@
                     <p id="ierrocpf"></p>
                 </div>
 
+                <input id="enviar" type="submit" value="Enviar">
+
             </form>
 
 
@@ -339,7 +372,51 @@
                     Horário de Atendimento: Seg a Sex - 9h às 18h.
                 </address>
             </div>
+            
         </section>
+
+        <div class="quiz">
+            <h2>QUIZ DO CAFÉ!</h2>
+            <div class="questao">
+                1) Quando foi descoberto o café?<br>
+                A - 2000<br>
+                B - 1852<br>
+                C - 1616 d.C<br>
+                D - 352 d.C<br>
+                <label for="respa">Resposta Questão 01</label>
+                <input type="text" id="resp1" class="inputquestionario">
+            </div>
+            <div class="questao">
+                2) Aonde foidescoberto o café?<br>
+                A - Brasil<br>
+                B - Alemanha<br>
+                C - Amsterdã<br>
+                D - França<br>
+                <label for="respa">Resposta Questão 02</label>
+                <input type="text" id="resp2" class="inputquestionario">
+            </div>
+            <div class="questao">
+                3) Quanto tempo é a validade de um bom café, comprado em grãos?<br>
+                A - Não perecível.<br>
+                B - 4 semanas<br>
+                C - 2 anos<br>
+                D - 4 meses<br>
+                <label for="respa">Resposta Questão 04</label>
+                <input type="text" id="resp3" class="inputquestionario">
+            </div>
+            <div class="questao">
+                4) Qual o país que mais consome café?<br>
+                A - Brasil<br>
+                B - Estados Unidos<br>
+                C - Inglaterra<br>
+                D - Finlândia<br>
+                <label for="respa">Resposta Questão 04</label>
+                <input type="text" id="resp4" class="inputquestionario">
+            </div>
+            </div>
+
+        </div>
+
 
     </main>
     <footer class="rodape">
@@ -365,11 +442,14 @@
             <div class="copyright">2022 CopyRight Café</div>
         </div>
 
+      
+
     </footer>
 
     <script>
 
         function verificarEmail() {
+
 
             var email = document.getElementById('iemail').value;
 
@@ -385,11 +465,8 @@
             }
 
             if
-                (email.includes(",") ||
-                email.includes("#") ||
-                email.includes("!") ||
-                email.includes(")") ||
-                email.includes("&")) {
+                (email.includes(",") || email.includes("#") || email.includes("!") || email.includes(")") || email.includes("&") || email.includes("@@") || email.includes("  ") || email.includes(" ") || email.includes("  ") || email.includes("   ") || email.includes("$")
+            ) {
                 document.getElementById('iemail').value = "Erro - Caracter Inválido";
 
             }
@@ -458,11 +535,6 @@
             }
 
             document.getElementById('itelefone').value = telefone;
-
-        }
-
-        function verificarEmail(x) {
-            verificarNome(x);
 
         }
 

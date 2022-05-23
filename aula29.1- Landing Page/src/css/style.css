@@ -92,19 +92,19 @@ body {
 }
 
 .contato h2{
-    font-size: 45px;
+    font-size: 25px;
     font-weight: 600;        
     margin-bottom: 30px;
 }
 
 .contato address {
-    font-size: 25px;
+    font-size: 12;
     font-weight: 600;
 }
 
 .contato .texto {
     position: absolute;
-    top: 30%;
+    top: 5%;
     left: 50%;
 }
 
@@ -149,5 +149,13 @@ body {
 }
 
 .rodape .conteudo-de-baixo{
-    margin-top:40px
+    margin-top:40px;
+}
+
+.quiz {
+
+}
+.questao div{
+    display: inline;
+    width: 400px;
 }
