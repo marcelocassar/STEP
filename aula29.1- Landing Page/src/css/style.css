@@ -152,10 +152,18 @@ body {
     margin-top:40px;
 }
 
-.quiz {
-
+.quiz input{
+    background-color: black;
+    color: white;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    font-size: 32px;
+    text-align: center;
 }
-.questao div{
-    display: inline;
+span{
+    display: inline-block;
     width: 400px;
+    padding: 20px;
 }

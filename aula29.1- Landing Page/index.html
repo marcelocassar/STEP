@@ -57,6 +57,47 @@
             width: 60%;
         }
 
+        .contato>p {
+            text-align: left;
+            vertical-align: center;
+            display: inline;
+            font-size: 15px;
+            padding-top: 10px;
+            margin-left: 10px;
+        }
+
+        .contato label {
+            color: rgb(255, 255, 255);
+            min-width: 132px;
+            max-width: 142px;
+            margin: 20px;
+            display: inline;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .contato input {
+            color: blue;
+            border: 1px black solid;
+            border-radius: 20px;
+            display: inline;
+            margin: 10px;
+            width: 150px;
+            height: 35px;
+            text-align: center;
+            width: 60%;
+        }
+
+        .contato textarea {
+            color: blue;
+            border: 1px black solid;
+            border-radius: 20px;
+            display: inline;
+            margin: 10px;
+            width: 60%;
+        }
+
         .peq,
         .grande {
             display: inline;
@@ -137,10 +178,37 @@
         #enviar:hover {
             color: white;
             background-color: rgba(0, 0, 0, 0.217);
-        } 
+        }
 
-      
-        
+        .quiz button {
+            margin: 50px;
+            width: 200px;
+            height: 75px;
+            border-radius: 20%;
+            box-shadow: 2px 3px 2px 2px;
+        }
+
+        .resposta {
+            width: 400px;
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .resposta button,
+        .resposta input {
+            width: 400px;
+            height: 60px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .resposta input {
+            width: 400px;
+            height: 60px;
+            border: 1px solid black;
+            text-align: center;
+            margin: 10px auto;
+        }
     </style>
 
 
@@ -156,8 +224,9 @@
 
             <ul>
                 <li><a href="#quem-somos">Quem Somos</a></li>
-                <li><a href="#onde-estamos">Onde Estamos</a></li>
+                <li><a href="#onde-estamos">Cadastro</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="#quiz">Quizz</a></li>
             </ul>
 
         </nav>
@@ -175,9 +244,12 @@
             <header>
                 <img src="./src/images/logo-secoes.png" alt="logo">
                 <h2>Quem Somos</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quibusdam facere ad, ipsa minus dolore
-                    illum, cumque sunt ea saepe nobis amet consequatur, ducimus voluptate eligendi iusto soluta sint
-                    totam.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AMuwlSYXQng"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+                <p>Nós somos o café, assista o video e conheça nossa história!</p>
             </header>
         </section>
 
@@ -351,14 +423,9 @@
                     <input type="text" name="" id="icpf" onblur="verificarCPF()">
                     <p id="ierrocpf"></p>
                 </div>
-
                 <input id="enviar" type="submit" value="Enviar">
 
             </form>
-
-
-
-
             </header>
 
         </section>
@@ -371,13 +438,25 @@
                     E-mail: marcelocassar@gmail.com<br><br>
                     Horário de Atendimento: Seg a Sex - 9h às 18h.
                 </address>
+                <label for="contnome">Nome: </label>
+                <input type="text" name="" id="icontnome" onblur="verificarNome('icontnome')">
+                <p id="erroicontnome" style="display: inline-block"></p>
+                <br>
+                <label for="icontemail">E-mail: </label>
+                <input type="text" name="" id="icontemail" onblur="verificarNome('icontemail')">
+
+                <p id="erroicontemail" style="display: inline"></p>
+                <br>
+                <label for="iconttexto">Nome: </label>
+                <textarea name="" id="iconttexto" cols="20" rows="10"></textarea>
+
             </div>
-            
+
         </section>
 
-        <div class="quiz">
+        <span id="quiz" class="quiz">
             <h2>QUIZ DO CAFÉ!</h2>
-            <div class="questao">
+            <span class="questao">
                 1) Quando foi descoberto o café?<br>
                 A - 2000<br>
                 B - 1852<br>
@@ -385,8 +464,10 @@
                 D - 352 d.C<br>
                 <label for="respa">Resposta Questão 01</label>
                 <input type="text" id="resp1" class="inputquestionario">
-            </div>
-            <div class="questao">
+                <p id="presp1"></p>
+            </span>
+            <br>
+            <span class="questao">
                 2) Aonde foidescoberto o café?<br>
                 A - Brasil<br>
                 B - Alemanha<br>
@@ -394,8 +475,10 @@
                 D - França<br>
                 <label for="respa">Resposta Questão 02</label>
                 <input type="text" id="resp2" class="inputquestionario">
-            </div>
-            <div class="questao">
+                <p id="presp2"></p>
+            </span>
+            <br>
+            <span class="questao">
                 3) Quanto tempo é a validade de um bom café, comprado em grãos?<br>
                 A - Não perecível.<br>
                 B - 4 semanas<br>
@@ -403,8 +486,10 @@
                 D - 4 meses<br>
                 <label for="respa">Resposta Questão 04</label>
                 <input type="text" id="resp3" class="inputquestionario">
-            </div>
-            <div class="questao">
+                <p id="presp3"></p>
+            </span>
+            <br>
+            <span class="questao">
                 4) Qual o país que mais consome café?<br>
                 A - Brasil<br>
                 B - Estados Unidos<br>
@@ -412,9 +497,17 @@
                 D - Finlândia<br>
                 <label for="respa">Resposta Questão 04</label>
                 <input type="text" id="resp4" class="inputquestionario">
-            </div>
-            </div>
-
+                <p id="presp4"></p>
+            </span>
+            <br>
+        </span>
+        <br>
+        <div class="resposta">
+            <button type="submit" onclick="verificarResposta()">Ver Nota</button>
+            <br>
+            <label for="itotalgeral"></label>
+            <input type="text" name="itotalgeral" id="itotalgeral">
+        </div>
         </div>
 
 
@@ -426,8 +519,9 @@
         </a>
         <ul>
             <li><a href="#quem-somos">Quem Somos</a></li>
-            <li><a href="#onde-estamos">Onde Estamos</a></li>
+            <li><a href="#onde-estamos">Cadastro</a></li>
             <li><a href="#contato">Contato</a></li>
+            <li><a href="#quiz">Quizz</a></li>
         </ul>
 
         <div class="conteudo-de-baixo">
@@ -441,9 +535,7 @@
             </div>
             <div class="copyright">2022 CopyRight Café</div>
         </div>
-
-      
-
+        
     </footer>
 
     <script>
@@ -452,7 +544,16 @@
 
 
             var email = document.getElementById('iemail').value;
+            email = email.trim();
+            email = email.toLowerCase();
 
+            while (email.includes(" ")) {
+                email = email.replace(" ", "");
+            }
+
+            if (email.length < 3) {
+                document.getElementById('iemail').value = " E-mail nuito pequeno"                
+            }
 
             if
                 (email.includes("@hotmail.com") ||
@@ -601,6 +702,47 @@
                 }
             }
             document.getElementById(x).value = nome;
+        }
+
+        function verificarResposta() {
+
+            let total = 0;
+            let resposta1 = document.getElementById('resp1').value;
+            let resposta2 = document.getElementById('resp2').value;
+            let resposta3 = document.getElementById('resp3').value;
+            let resposta4 = document.getElementById('resp4').value;
+
+
+            if (resposta1 == "C" || resposta1 == "c") {
+                total = total + 2.5
+                document.getElementById("presp1").innerHTML = "Você acertou e fez 2,5 pontos!"
+            } else {
+                document.getElementById("presp1").innerHTML = "Você errou a resposta correta era C."
+            }
+
+            if (resposta2 == "C" || resposta2 == "c") {
+                total = total + 2.5
+                document.getElementById("presp2").innerHTML = "Você acertou e fez 2,5 pontos!"
+            } else {
+                document.getElementById("presp2").innerHTML = "Você errou a resposta correta era C."
+            }
+
+            if (resposta3 == "B" || resposta1 == "b") {
+                total = total + 2.5
+                document.getElementById("presp3").innerHTML = "Você acertou e fez 2,5 pontos!"
+            } else {
+                document.getElementById("presp3").innerHTML = "Você errou a resposta correta era B."
+            }
+
+            if (resposta4 == "C" || resposta4 == "c") {
+                total = total + 2.5
+                document.getElementById("presp4").innerHTML = "Você acertou e fez 2,5 pontos!"
+            } else {
+                document.getElementById("presp4").innerHTML = "Você errou a resposta correta era C."
+            }
+
+            console.log(total);
+            document.getElementById("itotalgeral").value = "Seu resultador total foi:" + total + "!";
         }
 
     </script>
