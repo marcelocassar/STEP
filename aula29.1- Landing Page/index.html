@@ -209,6 +209,16 @@
             text-align: center;
             margin: 10px auto;
         }
+
+        
+        .contato button {
+            margin: 50px;
+            width: 200px;
+            height: 45px;
+            border-radius: 20px;
+            box-shadow: 2px 3px 2px 2px;
+        }
+
     </style>
 
 
@@ -338,32 +348,9 @@
                     <input type=number id="iidade" placeholder="Coloque sua idade">
                     <p id="erroiidade"></p>
                 </div>
-
-                <div class="cadastro">
-                    <label for="iano">Ano Nascimento</label>
-                    <input type=number id="iano" placeholder="Coloque o ano que nasceu:">
-                    <p id="erroiano"></p>
-                </div>
+                
                 <br>
-                <div class="cadastro">
-                    <label for="">Mês de Nascimento</label>
-                    <select name="select">
-                        <option value="valor1" selected>Selecionar Mês</option>
-                        <option value="valor2">JAN</option>
-                        <option value="valor3">FEV</option>
-                        <option value="valor4">MAR</option>
-                        <option value="valor5">ABR</option>
-                        <option value="valor6">MAI</option>
-                        <option value="valor7">JUN</option>
-                        <option value="valor8">JUL</option>
-                        <option value="valor9">AGO</option>
-                        <option value="valor10">SET</option>
-                        <option value="valor11">OUT</option>
-                        <option value="valor12">NOV</option>
-                        <option value="valor13">DEZ</option>
-                    </select>
-                </div>
-                <br>
+                
                 <div class="cadastro">
                     <label for="">Sexo:</label>
                     <select name="sexosel">
@@ -449,6 +436,8 @@
                 <br>
                 <label for="iconttexto">Nome: </label>
                 <textarea name="" id="iconttexto" cols="20" rows="10"></textarea>
+
+                <button>Enviar</button>
 
             </div>
 
@@ -649,12 +638,12 @@
             }
 
             if (nome == "" || nome == null) {
-                document.getElementById("erro" + x).innerHTML = "Nome Inválido.";
+                document.getElementById("erro" + x).innerHTML = "Dado Inválido";
                 document.getElementById("erro" + x).style.color = "red";
                 document.getElementById(x).style.borderColor = "red";
             } else {
                 if (!nome.includes(" ")) {
-                    document.getElementById("erro" + x).innerHTML = "Nome Inválido.";
+                    document.getElementById("erro" + x).innerHTML = "Dado Inválido";
                     document.getElementById("erro" + x).style.color = "red";
                     document.getElementById(x).style.borderColor = "red";
 
@@ -691,13 +680,7 @@
                             document.getElementById("erro" + x).style.color = "red";
                             document.getElementById("erro" + x).style.borderColor = "red";
 
-                        } else {
-
-                            document.getElementById(x).style.borderColor = "blue";
-                            document.getElementById(x).style.color = "blue";
-
-                            document.getElementById("erro" + x).innerHTML = "Nome Válido.";
-                        }
+                        } 
                     }
                 }
             }
