@@ -107,19 +107,18 @@
 
             text-align: center;
             margin: 0 auto;
-            border: 1px solid black;
             width: 85%;
-            height: 430px;
-            padding: 30px;
+            height: 350px;
+            padding-top: 30px;
+            padding-bottom: 10px;
+
 
         }
 
-
-
         .peq img {
 
-            width: 100px;
-            height: 100px;
+            width: 180px;
+            height: 180px;
             border-radius: 15% 15% 15% 15%;
             box-shadow: 3px 2px 5px 3px rgba(10, 1, 1, 0.238);
 
@@ -132,6 +131,9 @@
             height: 300px;
             margin-left: 20px;
             margin-right: 20px;
+            box-shadow: 3px 2px 5px 3px rgba(10, 1, 1, 0.238);
+            border-radius: 15% 15% 15% 15%;
+
 
         }
 
@@ -144,7 +146,7 @@
         }
 
         .botoes button {
-            margin: 50px;
+            margin: 10px;
             width: 200px;
             height: 75px;
             border-radius: 20%;
@@ -210,13 +212,27 @@
             margin: 10px auto;
         }
 
-        
+
         .contato button {
             margin: 50px;
             width: 200px;
             height: 45px;
             border-radius: 20px;
             box-shadow: 2px 3px 2px 2px;
+        }
+
+        select {
+            width: 350px;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 25px;
+            padding: 5px;
+            text-align: center;            
+        }
+
+        iframe {
+            text-align: center;
+            margin: 0 auto;
         }
 
     </style>
@@ -236,6 +252,7 @@
                 <li><a href="#quem-somos">Quem Somos</a></li>
                 <li><a href="#onde-estamos">Cadastro</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="#formulario">Contato</a></li>                
                 <li><a href="#quiz">Quizz</a></li>
             </ul>
 
@@ -300,7 +317,7 @@
                 <img src="./src/images/logo-secoes.png" alt="logo">
                 <h2>Formulário de Cadastro <br> Novos Clientes</h2>
             </header>
-            <form action="">
+            <form action="" id="formulario">
                 <div class="cadastro">
                     <label for="inome">Nome: </label>
                     <input type="text" id="inome" onblur="verificarNome('inome')">
@@ -348,9 +365,9 @@
                     <input type=number id="iidade" placeholder="Coloque sua idade">
                     <p id="erroiidade"></p>
                 </div>
-                
+
                 <br>
-                
+
                 <div class="cadastro">
                     <label for="">Sexo:</label>
                     <select name="sexosel">
@@ -427,12 +444,13 @@
                 </address>
                 <label for="contnome">Nome: </label>
                 <input type="text" name="" id="icontnome" onblur="verificarNome('icontnome')">
-                <p id="erroicontnome" style="display: inline-block"></p>
+                <br>
+                <p id="erroicontnome" style="display: inline-block; text-align: center;"></p>
                 <br>
                 <label for="icontemail">E-mail: </label>
                 <input type="text" name="" id="icontemail" onblur="verificarNome('icontemail')">
-
-                <p id="erroicontemail" style="display: inline"></p>
+                <br>
+                <p id="erroicontemail" style="display: inline; text-align: center;"></p>
                 <br>
                 <label for="iconttexto">Nome: </label>
                 <textarea name="" id="iconttexto" cols="20" rows="10"></textarea>
@@ -451,6 +469,9 @@
                 B - 1852<br>
                 C - 1616 d.C<br>
                 D - 352 d.C<br>
+
+            </span>
+            <span style="border: 1px solid black; text-align:center; width: 150px; margin-left: 100px;">
                 <label for="respa">Resposta Questão 01</label>
                 <input type="text" id="resp1" class="inputquestionario">
                 <p id="presp1"></p>
@@ -462,9 +483,11 @@
                 B - Alemanha<br>
                 C - Amsterdã<br>
                 D - França<br>
-                <label for="respa">Resposta Questão 02</label>
-                <input type="text" id="resp2" class="inputquestionario">
-                <p id="presp2"></p>
+                <span style="border: 1px solid black; text-align:center; width: 150px; margin-left: 80px;">
+                    <label for="respa">Resposta Questão 02</label>
+                    <input type="text" id="resp2" class="inputquestionario">
+                    <p id="presp2"></p>
+                </span>
             </span>
             <br>
             <span class="questao">
@@ -473,9 +496,11 @@
                 B - 4 semanas<br>
                 C - 2 anos<br>
                 D - 4 meses<br>
-                <label for="respa">Resposta Questão 04</label>
-                <input type="text" id="resp3" class="inputquestionario">
-                <p id="presp3"></p>
+                <span style="border: 1px solid black; text-align:center; width: 150px; margin-left: 80px;">
+                    <label for="respa">Resposta Questão 03</label>
+                    <input type="text" id="resp3" class="inputquestionario">
+                    <p id="presp3"></p>
+                </span>
             </span>
             <br>
             <span class="questao">
@@ -484,9 +509,11 @@
                 B - Estados Unidos<br>
                 C - Inglaterra<br>
                 D - Finlândia<br>
-                <label for="respa">Resposta Questão 04</label>
-                <input type="text" id="resp4" class="inputquestionario">
-                <p id="presp4"></p>
+                <span style="border: 1px solid black; text-align:center; width: 150px; margin-left: 80px;">
+                    <label for="respa">Resposta Questão 04</label>
+                    <input type="text" id="resp4" class="inputquestionario">
+                    <p id="presp4"></p>
+                </span>
             </span>
             <br>
         </span>
@@ -510,6 +537,7 @@
             <li><a href="#quem-somos">Quem Somos</a></li>
             <li><a href="#onde-estamos">Cadastro</a></li>
             <li><a href="#contato">Contato</a></li>
+            <li><a href="#formulario">Contato</a></li>  
             <li><a href="#quiz">Quizz</a></li>
         </ul>
 
@@ -524,7 +552,7 @@
             </div>
             <div class="copyright">2022 CopyRight Café</div>
         </div>
-        
+
     </footer>
 
     <script>
@@ -541,7 +569,7 @@
             }
 
             if (email.length < 3) {
-                document.getElementById('iemail').value = " E-mail nuito pequeno"                
+                document.getElementById('iemail').value = " E-mail nuito pequeno"
             }
 
             if
@@ -680,7 +708,7 @@
                             document.getElementById("erro" + x).style.color = "red";
                             document.getElementById("erro" + x).style.borderColor = "red";
 
-                        } 
+                        }
                     }
                 }
             }
@@ -698,34 +726,49 @@
 
             if (resposta1 == "C" || resposta1 == "c") {
                 total = total + 2.5
-                document.getElementById("presp1").innerHTML = "Você acertou e fez 2,5 pontos!"
+                document.getElementById("presp1").innerHTML = "Você acertou e fez 2,5 pontos!";
+                document.getElementById("presp1").style.color = "green";
+
             } else {
                 document.getElementById("presp1").innerHTML = "Você errou a resposta correta era C."
+                document.getElementById("presp1").style.color = "red";
+
             }
 
             if (resposta2 == "C" || resposta2 == "c") {
                 total = total + 2.5
-                document.getElementById("presp2").innerHTML = "Você acertou e fez 2,5 pontos!"
+                document.getElementById("presp2").innerHTML = "Você acertou e fez 2,5 pontos!";
+                document.getElementById("presp2").style.color = "green";
             } else {
-                document.getElementById("presp2").innerHTML = "Você errou a resposta correta era C."
+                document.getElementById("presp2").innerHTML = "Você errou a resposta correta era C.";
+                document.getElementById("presp2").style.color = "red";
+
             }
 
             if (resposta3 == "B" || resposta1 == "b") {
                 total = total + 2.5
-                document.getElementById("presp3").innerHTML = "Você acertou e fez 2,5 pontos!"
+                document.getElementById("presp3").innerHTML = "Você acertou e fez 2,5 pontos!";
+                document.getElementById("presp3").style.color = "green";
             } else {
-                document.getElementById("presp3").innerHTML = "Você errou a resposta correta era B."
+                document.getElementById("presp3").innerHTML = "Você errou a resposta correta era B.";
+                document.getElementById("presp3").style.color = "red";
+
             }
 
             if (resposta4 == "C" || resposta4 == "c") {
                 total = total + 2.5
-                document.getElementById("presp4").innerHTML = "Você acertou e fez 2,5 pontos!"
+                document.getElementById("presp4").innerHTML = "Você acertou e fez 2,5 pontos!";
+                document.getElementById("presp4").style.color = "green";
             } else {
                 document.getElementById("presp4").innerHTML = "Você errou a resposta correta era C."
+                document.getElementById("presp4").style.color = "red";
+
             }
 
             console.log(total);
-            document.getElementById("itotalgeral").value = "Seu resultador total foi:" + total + "!";
+            document.getElementById("itotalgeral").value = "Seu resultador total foi:" + total;
+            document.getElementById("itotalgeral").style.color = "blue";
+
         }
 
     </script>
